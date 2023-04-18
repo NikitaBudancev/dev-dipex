@@ -1,0 +1,77 @@
+<template>
+  <div class="flex flex-wrap mt-20">
+    <div class="w-full">
+      <ul class="flex justify-center gap-8 text-gray-400">
+        <li class="text-center">
+          <button
+            class="icon-text text-xl font-bold"
+            v-on:click="toggleTabs(1)"
+            v-bind:class="{
+              '': openTab !== 1,
+              'text-orange-400 border-b-3 border-orange-400': openTab === 1,
+            }"
+          >
+            <img
+              class="w-10"
+              src="https://dipex.lv/static/light-icon-active.svg"
+              alt=""
+            />
+            <span>Легковые</span>
+          </button>
+        </li>
+        <li class="text-center">
+          <button
+            class="icon-text text-xl font-bold"
+            v-on:click="toggleTabs(2)"
+            v-bind:class="{
+              '': openTab !== 2,
+              'text-orange-400 border-b-3 border-orange-400': openTab === 2,
+            }"
+          >
+            <img
+              class="w-10"
+              src="https://dipex.lv/static/moto-icon-active.svg"
+              alt=""
+            />
+            <span>Мотоциклы</span>
+          </button>
+        </li>
+      </ul>
+      <div class="relative flex flex-col min-w-0 break-words">
+        <div class="px-4 py-5 flex-auto">
+          <div class="tab-content tab-space">
+            <div v-bind:class="{ hidden: openTab !== 1, block: openTab === 1 }">
+              <TabAuto />
+            </div>
+            <div v-bind:class="{ hidden: openTab !== 2, block: openTab === 2 }">
+              <TabMoto />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import TabAuto from '~/components/base/tabs/tab/Auto.vue.js';
+import TabMoto from '~/components/base/tabs/tab/Moto.vue.js';
+
+export default {
+  components: {
+    TabAuto,
+    TabMoto,
+  },
+
+  data() {
+    return {
+      openTab: 1,
+    };
+  },
+  methods: {
+    toggleTabs: function (tabNumber) {
+      this.openTab = tabNumber;
+    },
+  },
+};
+</script>

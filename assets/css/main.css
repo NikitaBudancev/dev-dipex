@@ -1,0 +1,28 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container-main {
+  @apply max-w-[1400px] mx-auto px-4;
+}
+
+.page {
+  @apply bg-[url('https://dipex.lv/bitrix/templates/eshop_bootstrap_yellow/images/SlideBack.jpg')] bg-stone-400 bg-contain min-h-screen;
+}
+
+.content {
+  @apply container-main pt-3 pb-8 bg-[#F5F5F5] min-h-screen;
+}
+
+.icon-text {
+  @apply flex gap-2 items-center;
+}
+
+.btn {
+  @apply block py-5 px-14 text-center text-white bg-amber-500 font-bold rounded-lg hover:bg-amber-500/90 border-0;
+}
+
+.sup-icon {
+  @apply flex justify-center items-center absolute -top-2 left-1/2 bg-amber-500 w-5 h-5 rounded-full text-white;
+}
