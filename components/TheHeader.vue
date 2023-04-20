@@ -2,13 +2,13 @@
   <header class="main-header main-header_desktop bg-white py-2 shadow-sm">
     <div class="flex justify-between items-center container-main">
       <div class="flex justify-between items-center w-4/12 text-sm">
-        <a href="/ru" class="logo">
+        <NuxtLink to="/" class="logo">
           <img
             src="https://dipex.lv/include/logo.png"
             class="w-40"
             alt="Dipex"
           />
-        </a>
+        </NuxtLink>
         <a class="icon-text font-bold" href="mailto:info@dipex.lv">
           <svg
             aria-hidden="true"
@@ -186,7 +186,7 @@
           <span class="sup-icon">0</span>
         </a>
 
-        <SelectLanguage />
+        <PopoverLanguages />
 
         <div class="header-lk ba">
           <div class="flex" role="group">
@@ -209,25 +209,3 @@
   <PopoverMain />
 </template>
 
-<script>
-import SelectLanguage from '@/components/base/popover/SelectLanguage.vue';
-
-export default {
-  components: {
-    SelectLanguage,
-  },
-};
-</script>
-
-<style scoped>
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: 0.255em;
-  vertical-align: 0.255em;
-  content: '';
-  border-top: 0.3em solid;
-  border-right: 0.3em solid transparent;
-  border-bottom: 0;
-  border-left: 0.3em solid transparent;
-}
-</style>

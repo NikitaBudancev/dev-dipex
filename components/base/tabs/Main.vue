@@ -54,8 +54,8 @@
 </template>
 
 <script>
-import TabAuto from '~/components/base/tabs/tab/Auto.vue.js';
-import TabMoto from '~/components/base/tabs/tab/Moto.vue.js';
+import TabAuto from '~/components/base/tabs/tab/Auto.vue';
+import TabMoto from '~/components/base/tabs/tab/Moto.vue';
 
 export default {
   components: {
