@@ -50,45 +50,48 @@
           <span>64415360</span>
         </a>
       </div>
-      <div class="main-header__search-block w-2/12">
-        <form class="relative" action="/ru/catalog/rezerves-dalas/">
-          <input
-            type="search"
-            name="search_q"
-            placeholder="Номер, Артикул, OE....."
-            aria-label="Search"
-            value=""
-            class="block w-full p-1 border rounded relative outline-none focus:border focus:border-amber-500"
-          />
-          <button
-            class="absolute top-0 right-0 w-8 bg-amber-500 h-full rounded-r"
-            type="submit"
-          >
-            <svg
-              aria-hidden="true"
-              height="15px"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="search"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              class="mx-auto"
+      <div class="main-header__search-block w-3/12">
+        <form>
+          <div class="flex">
+            <label
+              for="location-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              >Your Email</label
             >
-              <path
-                fill="#fff"
-                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+            <div class="relative w-full">
+              <input
+                type="search"
+                id="location-search"
+                class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-amber-500"
+                placeholder="Numurs, Artikuls , OE....."
+                required
+              />
+              <button
+                type="submit"
+                class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-amber-500 rounded-r-lg border border-amber-500 hover:bg-amber-500/90 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:bg-amber-500 dark:hover:bg-amber-500 dark:focus:ring-amber-500"
               >
-                <path
-                  fill="#fff"
-                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                ></path>
-              </path>
-            </svg>
-          </button>
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <span class="sr-only">Search</span>
+              </button>
+            </div>
+          </div>
         </form>
       </div>
-      <div class="flex justify-between items-center w-4/12">
+      <div class="flex justify-between items-center w-3/12">
         <div class="h-6">
           <button class="relative">
             <span class="sup-icon">0</span>
@@ -186,21 +189,61 @@
           <span class="sup-icon">0</span>
         </a>
 
-        <PopoverLanguages />
+        <BasePopoverLanguages />
 
-        <div class="header-lk ba">
-          <div class="flex" role="group">
+        <img
+          id="avatarButton"
+          type="button"
+          data-dropdown-toggle="userDropdown"
+          data-dropdown-placement="bottom-start"
+          class="rounded-full cursor-pointer"
+          src="/images/icons/profile.svg"
+          alt="User dropdown"
+          width="24"
+          height="24"
+        />
+
+        <!-- Dropdown menu -->
+        <div
+          id="userDropdown"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+        >
+          <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+            <div>Bonnie Green</div>
+            <div class="font-medium truncate">name@flowbite.com</div>
+          </div>
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="avatarButton"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Earnings</a
+              >
+            </li>
+          </ul>
+          <div class="py-1">
             <a
-              class="-mr-0.5 rounded-l-lg border-amber-500 border-2 py-1.5 px-3 text-amber-500 hover:bg-amber-500 hover:text-white"
-              href="/ru/personal/"
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >Sign out</a
             >
-              Войти
-            </a>
-            <button
-              class="rounded-r-lg border-amber-500 border-2 py-1.5 px-3 text-amber-500 hover:bg-amber-500/90 hover:text-white"
-            >
-              Регистрация
-            </button>
           </div>
         </div>
       </div>
@@ -209,3 +252,4 @@
   <PopoverMain />
 </template>
 
+<script></script>

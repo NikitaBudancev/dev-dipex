@@ -339,11 +339,14 @@
   <section>
     <BaseTabsMain />
   </section>
+
+  
+
+
 </template>
 
-<script>
 
-const layout = "index";
+<script>
 
 export default {
   data() {

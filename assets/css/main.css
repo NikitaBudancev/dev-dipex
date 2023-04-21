@@ -8,7 +8,7 @@ body {
 }
 
 .container-main {
-  @apply max-w-[1400px] mx-auto px-4;
+  @apply max-w-[1700px] mx-auto px-4;
 }
 
 .page {

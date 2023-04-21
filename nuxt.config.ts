@@ -40,7 +40,6 @@ export default defineNuxtConfig({
       "Open+Sans": {
         wght: [300, 400, 500, 600, 700],
       },
-      "Josefin+Sans": true,
       download: true,
     },
   },
