@@ -499,8 +499,15 @@
 </template>
 
 <script setup>
+
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
 import { Modal } from "flowbite-vue";
 import { ref } from "vue";
+
+onMounted(() => {
+    initFlowbite();
+})
 
 const isShowModal = ref(false);
 function closeModal() {

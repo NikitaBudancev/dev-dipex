@@ -193,6 +193,7 @@
 
         <img
           id="avatarButton"
+          @click="test"
           type="button"
           data-dropdown-toggle="userDropdown"
           data-dropdown-placement="bottom-start"
@@ -218,6 +219,7 @@
           >
             <li>
               <a
+                @click="closeDropdown"
                 href="#"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >Dashboard</a
@@ -248,8 +250,29 @@
         </div>
       </div>
     </div>
+
   </header>
   <PopoverMain />
 </template>
 
-<script></script>
+<script setup>
+
+const dropdown = ref();
+const closeDropdown = ref(() => {});
+const test = ref(() => {
+  console.log("test");
+});
+
+onMounted(() => {
+  const $targetEl = document.getElementById("userDropdown");
+  const $triggerEl = document.getElementById("avatarButton");
+  const options = {};
+
+  if ($targetEl) {
+    dropdown.value = new Dropdown($targetEl, $triggerEl, options);
+    closeDropdown.value = () => {
+      dropdown.value.hide();
+    };
+  }
+});
+</script>

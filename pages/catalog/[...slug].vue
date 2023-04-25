@@ -1,9 +1,7 @@
 <template>
   <section>
-    <BaseCategoryList :categories="categories"/>
-    <div class="flex justify-center mt-8">
-      <a class="btn" href="/catalog/rezerves-dalas/">Больше разделов</a>
-    </div>
+    <BaseCategoryList :categories="categories" v-if="isCategory"/>
+    <BaseCategoryProducts v-else />
   </section>
   <section>
     <TabsMain />
@@ -11,10 +9,15 @@
 </template>
 
 <script setup>
-import { useCatalogStore } from '~/store/catalog'
-import { storeToRefs } from 'pinia'
+import { useCatalogStore } from "~/store/catalog";
+import { storeToRefs } from "pinia";
 
-const catalogStore = useCatalogStore()
-const { categories } = storeToRefs(catalogStore)
+const route = useRoute();
+
+const catalogStore = useCatalogStore();
+const { categories } = storeToRefs(catalogStore);
+
+const isCategory = ref(false);
+
+isCategory.value = route.params.slug.length < 3;
 </script>
-

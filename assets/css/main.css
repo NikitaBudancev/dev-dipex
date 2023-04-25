@@ -7,12 +7,28 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.appearance-none-input::-webkit-outer-spin-button,
+.appearance-none-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Firefox */
+.appearance-none-input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .container-main {
   @apply max-w-[1700px] mx-auto px-4;
 }
 
 .page {
-  @apply bg-[url('https://dipex.lv/bitrix/templates/eshop_bootstrap_yellow/images/SlideBack.jpg')] bg-stone-400 bg-contain min-h-screen;
+  /* @apply bg-[url('https://dipex.lv/bitrix/templates/eshop_bootstrap_yellow/images/SlideBack.jpg')] bg-stone-400 bg-contain min-h-screen; */
+  @apply bg-[#F5F5F5]
 }
 
 .content {
@@ -24,7 +40,11 @@ body {
 }
 
 .btn {
-  @apply block py-5 px-14 text-center text-white bg-amber-500 font-bold rounded-lg hover:bg-amber-500/90 border-0;
+  @apply flex py-5 px-14 text-center text-white bg-amber-500 font-bold rounded-lg hover:bg-amber-500/90 border-0;
+}
+
+.btn-small {
+  @apply flex py-2 px-6;
 }
 
 .sup-icon {

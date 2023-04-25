@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white p-3 rounded-md shadow-md relative">
+  <div class="bg-white p-3 rounded-md shadow-md relative min-h-[190px]">
     <img
       :src="item.image"
       class="absolute bottom-3 right-3 w-28 h-28 object-contain"
