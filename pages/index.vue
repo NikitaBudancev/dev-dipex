@@ -10,7 +10,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="mb-8">
     <h2 class="text-4xl mt-8 mb-6">Популярные категории</h2>
     <div class="flex justify-between gap-8">
       <div class="w-1/2 grid grid-cols-2 gap-8">

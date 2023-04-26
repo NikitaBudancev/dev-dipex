@@ -1,6 +1,9 @@
 import { defineStore } from "pinia";
 
 export const useCatalogStore = defineStore("catalogStore", () => {
+
+  const products = ref([]);
+  const pagination = ref([]);
   const categories = ref([
     {
       id: 1,
@@ -466,7 +469,29 @@ export const useCatalogStore = defineStore("catalogStore", () => {
         },
       ],
     },
-  ],);
+  ]);
 
-  return { categories };
+  const fetchProduct = async () => {
+    const headers = {
+      Authorization: "Bearer 43|vNdjQsHnHexQ3EUZQLjkhU18ps5i4THvS1Z7ZMhq",
+      "Content-Type": "application/json",
+    };
+
+    const { data } = await useFetch(
+      "https://api.dipex.lv/api/rest/v1/products/get/",
+      {
+        headers,
+        method: "GET",
+      }
+    );
+
+    if (data.value) {
+      products.value = data.value.products;
+      pagination.value = data.value.pagination
+    } else {
+      console.log("empty");
+    }
+  };
+
+  return { categories, fetchProduct, products, pagination };
 });

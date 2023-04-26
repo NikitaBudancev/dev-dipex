@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-[75px]">
+  <div class="">
     <BaseFilterCarSelect />
 
     <form class="pt-8 pb-8 px-5 bg-white rounded-xl shadow-md mt-4"

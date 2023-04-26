@@ -1,11 +1,10 @@
 <template>
-  <div class="bg-white p-3 rounded-md shadow-md">
+  <div class="bg-white p-3 pb-0 rounded-md shadow-md">
     <div class="flex gap-3 mb-3">
       <div class="w-3/12">
-        <a
+        <NuxtLink
           class="relative"
-          data-product-id="14342831"
-          href="/ru/catalog/rezerves-dalas/braking-system/brake-calipers/brake-caliper-mounting/abakus-131-04-006/"
+          :to="product.code"
           title="Тормозной суппорт ABAKUS 131-04-006"
           data-entity="image-wrapper"
         >
@@ -43,7 +42,7 @@
               alt=""
             />
           </div>
-        </a>
+        </NuxtLink>
       </div>
 
       <div class="w-9/12">
@@ -52,17 +51,17 @@
             <div class="w-7/12">
               <div class="box-padding">
                 <div class="product-item-title">
-                  <a
-                    href="/catalog/rezerves-dalas/braking-system/brake-calipers/brake-caliper-mounting/abakus-131-04-006/"
-                    title="Тормозной суппорт ABAKUS 131-04-006"
+                  <NuxtLink
                     class="text-lg text-[#3f3f3f] font-bold"
+                    :to="product.code"
+                    title="Тормозной суппорт ABAKUS 131-04-006"
                     data-product-id="14342831"
                   >
                     Тормозной суппорт ABAKUS 131-04-006
-                  </a>
+                  </NuxtLink>
                 </div>
               </div>
-              <BaseProductCardProperty :properties="properties"/>
+              <BaseProductCardProperty :properties="properties" />
             </div>
             <div class="w-5/12">
               <div
@@ -89,51 +88,11 @@
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                 </div>
-                <div class="flex gap-1 items-end" data-entity="price-block">
-                  <div class="product-item-price-old__block">
-                    <span class="text-sm text-gray-400 line-through">
-                      52.01 € </span
-                    >&nbsp;
-                  </div>
-                  <div class="flex flex-col items-end">
-                    <span
-                      class="py-px px-2 text-white text-sm bg-red-600 rounded"
-                    >
-                      -20%
-                    </span>
-                    <span class="font-bold text-xl text-black/95">
-                      41.61 €
-                    </span>
-                  </div>
-                </div>
-                <div class="flex gap-4 items-center w-full justify-end">
-                  <div
-                    class="product-item-info-container product-item-info-container_qty-block"
-                    data-entity="quantity-block"
-                  >
-                    <div class="product-item-amount">
-                      <div class="flex items-center gap-0.5" data-test="">
-                        <button
-                          class="bg-gray-300 w-5 h-5 leading-5 text-center"
-                        >
-                          -
-                        </button>
-                        <input
-                          class="max-w-[30px] h-5 border-0 p-0 appearance-none-input text-center text-sm"
-                          type="number"
-                          name="quantity"
-                          value="1"
-                          min="1"
-                        />
-                        <button
-                          class="bg-gray-300 w-5 h-5 leading-5 text-center"
-                        >
-                          +
-                        </button>
-                      </div>
-                    </div>
-                  </div>
 
+                <BaseProductPrice />
+
+                <div class="flex gap-4 items-center w-full justify-end">
+                  <BaseProductCount />
                   <div
                     class="product-item-info-container product-item-info-container_buy-btn"
                     data-entity="buttons-block"
@@ -196,7 +155,9 @@
         </div>
       </div>
     </div>
-    <div class="flex items-center justify-end gap-4 text-sm">
+    <div
+      class="flex items-center justify-end gap-4 text-sm px-3 py-1.5 bg-gray-50 -mx-3 rounded-md"
+    >
       <a
         href="/ru/catalog/rezerves-dalas/braking-system/brake-calipers/brake-caliper-mounting/abakus-131-04-006/#analogs"
         class="icon-text underline text-amber-500"
@@ -282,6 +243,13 @@
 
 <script setup lang="ts">
 import { Rating } from "flowbite-vue";
+
+const { product } = defineProps({
+  product: {
+    type: Object,
+    require: true,
+  },
+});
 
 const properties = ref([
   {

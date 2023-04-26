@@ -23,7 +23,7 @@
 <script setup lang="ts">
 const { properties } = defineProps({
   properties: {
-    type: Object,
+    type: Array,
     required: true,
   },
 });

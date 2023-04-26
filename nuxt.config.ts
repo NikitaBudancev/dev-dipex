@@ -34,7 +34,7 @@ export default defineNuxtConfig({
       "composables/**",
     ],
   },
-  modules: ["@nuxtjs/google-fonts", "@pinia/nuxt"],
+  modules: ["@nuxtjs/google-fonts", "@pinia/nuxt", "@nuxtjs/i18n"],
   pinia: {
     autoImports: [
       // automatically imports `defineStore`

@@ -23,12 +23,12 @@ button {
 }
 
 .container-main {
-  @apply max-w-[1700px] mx-auto px-4;
+  @apply max-w-[1400px] mx-auto px-4;
 }
 
 .page {
-  /* @apply bg-[url('https://dipex.lv/bitrix/templates/eshop_bootstrap_yellow/images/SlideBack.jpg')] bg-stone-400 bg-contain min-h-screen; */
-  @apply bg-[#F5F5F5]
+  @apply bg-[url('https://dipex.lv/bitrix/templates/eshop_bootstrap_yellow/images/SlideBack.jpg')] bg-stone-400 bg-contain min-h-screen;
+  /* @apply bg-[#F5F5F5] */
 }
 
 .content {
