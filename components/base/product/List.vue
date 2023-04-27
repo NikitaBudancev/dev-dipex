@@ -12,7 +12,5 @@ const store = useCatalogStore();
 const { fetchProduct } = store;
 const { products, pagination } = storeToRefs(store);
 
-// const {pagination, products} = dataProduct.value
-
 await fetchProduct();
 </script>

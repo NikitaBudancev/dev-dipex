@@ -4,7 +4,7 @@
       <div class="w-3/12 shadow rounded-xl">
         <NuxtLink
           class="icon-text justify-center py-5 bg-amber-500 rounded-xl text-white hover:bg-amber-500/90"
-          to="/catalog/"
+          :to="localePath('/catalog/')"
         >
           <svg
             aria-hidden="true"
@@ -31,19 +31,32 @@
           class="flex justify-between text-center bg-white rounded-xl overflow-hidden font-medium"
         >
           <li class="w-full">
-            <NuxtLink class="block py-5 hover:bg-gray-200" to="/about/payment/"
-              >Оплата</NuxtLink>
+            <NuxtLink
+              class="block py-5 hover:bg-gray-200"
+              :to="localePath('/about/payment/')"
+              >Оплата</NuxtLink
+            >
           </li>
           <li class="w-full">
-            <NuxtLink class="block py-5 hover:bg-gray-200" to="/about/delivery/"
-              >Доставка</NuxtLink>
+            <NuxtLink
+              class="block py-5 hover:bg-gray-200"
+              :to="localePath('/about/delivery/')"
+              >Доставка</NuxtLink
+            >
           </li>
           <li class="w-full">
-            <NuxtLink class="block py-5 hover:bg-gray-200" to="/about/contacts/"
-              >Контакты</NuxtLink>
+            <NuxtLink
+              class="block py-5 hover:bg-gray-200"
+              :to="localePath('/about/contacts/')"
+              >Контакты</NuxtLink
+            >
           </li>
         </ul>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+const localePath = useLocalePath();
+</script>

@@ -159,7 +159,7 @@
       class="flex items-center justify-end gap-4 text-sm px-3 py-1.5 bg-gray-50 -mx-3 rounded-md"
     >
       <a
-        href="/ru/catalog/rezerves-dalas/braking-system/brake-calipers/brake-caliper-mounting/abakus-131-04-006/#analogs"
+        href="catalog/rezerves-dalas/braking-system/brake-calipers/brake-caliper-mounting/abakus-131-04-006/#analogs"
         class="icon-text underline text-amber-500"
       >
         <svg

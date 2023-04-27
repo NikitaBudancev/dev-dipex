@@ -6,7 +6,7 @@
     />
 
     <NuxtLink
-      to="/catalog/rezerves-dalas/exhaust-system/"
+      :to="localePath('/catalog/rezerves-dalas/exhaust-system/')"
       class="font-semibold mb-4 block"
     >
       {{ item.title }}
@@ -20,7 +20,7 @@
         >
           <NuxtLink
             class="hover:text-blue-600"
-            to="/catalog/rezerves-dalas/exhaust-system/silencer/"
+            :to="localePath('/catalog/rezerves-dalas/exhaust-system/')"
           >
             {{ category.title }}
           </NuxtLink>

@@ -2,7 +2,7 @@
   <header class="main-header main-header_desktop bg-white py-2 shadow-sm">
     <div class="flex justify-between items-center container-main">
       <div class="flex justify-between items-center w-4/12 text-sm">
-        <NuxtLink to="/" class="logo">
+        <NuxtLink :to="localePath('/')" class="logo">
           <img
             src="https://dipex.lv/include/logo.png"
             class="w-40"
