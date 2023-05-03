@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .carousel {
   max-width: 986px;
 }

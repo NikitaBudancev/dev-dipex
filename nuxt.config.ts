@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       "composables/**",
     ],
   },
+
   modules: ["@nuxtjs/google-fonts", "@pinia/nuxt", "@nuxtjs/i18n"],
   pinia: {
     autoImports: [
@@ -51,16 +52,16 @@ export default defineNuxtConfig({
     defaultLocale: "lv",
     locales: [
       {
-        code: "ru",
-        name: "Russian",
-        file: "ru.json",
-        icon: "ru.svg",
-      },
-      {
         code: "lv",
         name: "Latvian",
         file: "lv.json",
         icon: "lv.svg",
+      },
+      {
+        code: "ru",
+        name: "Russian",
+        file: "ru.json",
+        icon: "ru.svg",
       },
       {
         code: "lt",

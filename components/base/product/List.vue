@@ -8,6 +8,14 @@
 import { useCatalogStore } from "~/store/catalog";
 import { storeToRefs } from "pinia";
 
+import { onMounted } from "vue";
+import { initFlowbite } from "flowbite";
+import { ref } from "vue";
+
+onMounted(() => {
+  initFlowbite();
+});
+
 const store = useCatalogStore();
 const { fetchProduct } = store;
 const { products, pagination } = storeToRefs(store);

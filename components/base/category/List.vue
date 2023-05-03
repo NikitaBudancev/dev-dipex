@@ -8,8 +8,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ['categories']
-};
+<script setup lang="ts">
+const props = defineProps({
+  categories: {
+    type: Array,
+    required: true,
+  },
+});
+
+const {categories} = toRefs(props)
+
 </script>

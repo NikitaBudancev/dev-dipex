@@ -91,7 +91,7 @@
           </div>
         </form>
       </div>
-      <div class="flex justify-between items-center w-3/12">
+      <div class="flex justify-between items-center w-4/12">
         <div class="h-6">
           <button class="relative">
             <span class="sup-icon">0</span>
@@ -191,77 +191,124 @@
 
         <BasePopoverLanguages />
 
-        <img
+        <button
+          class="icon-text text-xs"
           id="avatarButton"
-          @click="test"
           type="button"
           data-dropdown-toggle="userDropdown"
           data-dropdown-placement="bottom-start"
-          class="rounded-full cursor-pointer"
-          src="/images/icons/profile.svg"
-          alt="User dropdown"
-          width="24"
-          height="24"
-        />
+        >
+          <img
+            class="rounded-full cursor-pointer"
+            src="/images/icons/profile.svg"
+            alt="User dropdown"
+            width="32"
+            height="32"
+          />
+          <span>
+            <span class="flex items-center">
+              <span class="text">Мой профиль</span>
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill="#212B36"
+                  fill-rule="evenodd"
+                  d="M8.32811295,10.13086 L10.9843566,7.47461635 C11.1679576,7.29297997 11.1679576,6.99610187 10.9843566,6.81252 L10.5429591,6.37110336 C10.3613227,6.18752149 10.0644446,6.18752149 9.88084363,6.37110336 L7.99804706,8.253919 L6.11523142,6.37110336 C5.93359504,6.18752149 5.63671693,6.18752149 5.45311599,6.37110336 L5.01171842,6.81252 C4.82811748,6.99415637 4.82811748,7.29103448 5.01171842,7.47461635 L7.66796209,10.13086 C7.85156303,10.314461 8.14842207,10.314461 8.32811295,10.13086 Z"
+                />
+              </svg>
+            </span>
+            <span class="block text-ellipsis whitespace-nowrap overflow-hidden max-w-[110px]">Никита Буданцев test</span>
+          </span>
+        </button>
 
         <!-- Dropdown menu -->
         <div
           id="userDropdown"
-          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          class="z-10 hidden bg-white divide-y divide-gray-100 border border-gray-100 rounded-lg shadow-2xl w-60 dark:bg-gray-700 dark:divide-gray-600"
         >
           <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-            <div>Bonnie Green</div>
-            <div class="font-medium truncate">name@flowbite.com</div>
+            <NuxtLink
+              class="flex items-center gap-2"
+              :to="localePath('/personal/')"
+            >
+              <span
+                class="flex items-center justify-center w-8 h-8 border border-gray-200 rounded-full bg-gray-100 font-semibold text-gray-700"
+                >Н</span
+              >
+              <span>Никита Буданцев</span>
+            </NuxtLink>
+            <!-- <div class="font-medium truncate">Войти</div> -->
           </div>
           <ul
             class="py-2 text-sm text-gray-700 dark:text-gray-200"
             aria-labelledby="avatarButton"
           >
             <li>
-              <a
+              <NuxtLink
+                to="#"
                 @click="closeDropdown"
-                href="#"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Dashboard</a
+                >Текущие заказы</NuxtLink
               >
             </li>
             <li>
-              <a
-                href="#"
+              <NuxtLink
+                to="#"
+                @click="closeDropdown"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Settings</a
+                >Личные данные</NuxtLink
               >
             </li>
             <li>
-              <a
-                href="#"
+              <NuxtLink
+                to="#"
+                @click="closeDropdown"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Earnings</a
+                >История заказов</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
+                to="#"
+                @click="closeDropdown"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Корзина</NuxtLink
+              >
+            </li>
+            <li>
+              <NuxtLink
+                to="#"
+                @click="closeDropdown"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Контакты</NuxtLink
               >
             </li>
           </ul>
           <div class="py-1">
             <a
               href="#"
+              @click="closeDropdown"
               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-              >Sign out</a
+              >Выйти</a
             >
           </div>
         </div>
       </div>
     </div>
-
   </header>
   <PopoverMain />
 </template>
 
 <script setup>
+const localePath = useLocalePath();
 
 const dropdown = ref();
 const closeDropdown = ref(() => {});
-const test = ref(() => {
-  console.log("test");
-});
 
 onMounted(() => {
   const $targetEl = document.getElementById("userDropdown");

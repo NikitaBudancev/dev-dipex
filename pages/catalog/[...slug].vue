@@ -1,23 +1,43 @@
 <template>
   <section>
-    <BaseCategoryList :categories="categories" v-if="isCategory"/>
-    <BaseCategoryProducts v-else />
-  </section>
-  <section>
-    <TabsMain />
+    <BaseCategoryList
+      :categories="categories"
+      v-if="isCategory == 'category'"
+    />
+    <BaseCategoryProducts
+      v-else-if="isCategory == 'products'"
+      :pagination="pagination"
+    />
+    <BaseProductDetail v-else />
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useCatalogStore } from "~/store/catalog";
 import { storeToRefs } from "pinia";
 
 const route = useRoute();
+const isCategory = ref("");
 
-const catalogStore = useCatalogStore();
-const { categories } = storeToRefs(catalogStore);
+const store = useCatalogStore();
 
-const isCategory = ref(false);
+// const { fetchCategories } = store;
+const { categories, pagination } = storeToRefs(store);
 
-isCategory.value = route.params.slug.length < 3;
+// await fetchCategories();
+
+// console.log(categories);
+
+let lengthRoutes = route.params.slug.length;
+
+switch (lengthRoutes) {
+  case 4:
+    isCategory.value = "product";
+    break;
+  case 3:
+    isCategory.value = "products";
+    break;
+  default:
+    isCategory.value = "category";
+}
 </script>

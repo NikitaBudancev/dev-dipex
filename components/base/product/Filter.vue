@@ -2,7 +2,8 @@
   <div class="">
     <BaseFilterCarSelect />
 
-    <form class="pt-8 pb-8 px-5 bg-white rounded-xl shadow-md mt-4"
+    <form
+      class="pt-8 pb-8 px-5 bg-white rounded-xl shadow-md mt-4"
       action="/ru/catalog/rezerves-dalas/braking-system/brake-calipers/brake-caliper-mounting/?new=true&amp;filter_brands%5B%5D=4657&amp;filter_brands%5B%5D=6558"
       method="get"
     >

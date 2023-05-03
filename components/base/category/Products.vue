@@ -8,3 +8,16 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps({
+  pagination: {
+    type: Array,
+    required: true,
+  },
+});
+
+const { pagination } = props;
+
+console.log(pagination);
+</script>

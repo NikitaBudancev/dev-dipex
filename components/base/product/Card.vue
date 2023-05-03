@@ -4,7 +4,7 @@
       <div class="w-3/12">
         <NuxtLink
           class="relative"
-          :to="product.code"
+          :to="product.code + '/'"
           title="Тормозной суппорт ABAKUS 131-04-006"
           data-entity="image-wrapper"
         >
@@ -18,22 +18,7 @@
                 alt=""
               />
             </div>
-            <div class="product-item-brand__logo-block tooltip__btn relative">
-              <button data-tooltip-target="tooltip-default" type="button">
-                <img
-                  src="https://dipex.lv/images/brands/465717018.jpg"
-                  class="h-7"
-                />
-              </button>
-              <div
-                id="tooltip-default"
-                role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-1 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-              >
-                ABAKUS
-                <div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
-            </div>
+            <BaseProductBrandLogo />
           </div>
 
           <div>
@@ -53,7 +38,7 @@
                 <div class="product-item-title">
                   <NuxtLink
                     class="text-lg text-[#3f3f3f] font-bold"
-                    :to="product.code"
+                    :to="product.code + '/'"
                     title="Тормозной суппорт ABAKUS 131-04-006"
                     data-product-id="14342831"
                   >
@@ -69,26 +54,7 @@
                 data-empty="1"
                 data-fill="4"
               >
-                <div
-                  class="product-item-brand__rating product-item-brand__rating_hide-mobile tooltip__btn"
-                >
-                  <div>
-                    <Rating
-                      :rating="4"
-                      data-tooltip-target="tooltip-default-1"
-                    />
-                  </div>
-
-                  <div
-                    id="tooltip-default-1"
-                    role="tooltip"
-                    class="absolute z-10 invisible inline-block px-3 py-1 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-                  >
-                    Средний класс
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
-
+                <BaseProductRating />
                 <BaseProductPrice />
 
                 <div class="flex gap-4 items-center w-full justify-end">
@@ -242,7 +208,6 @@
 </template>
 
 <script setup lang="ts">
-import { Rating } from "flowbite-vue";
 
 const { product } = defineProps({
   product: {

@@ -30,6 +30,8 @@
     "flowbite": "^1.6.5",
     "flowbite-vue": "^0.0.10",
     "pinia": "^2.0.34",
+    "vue-agile": "^2.0.0",
+    "vue-cool-lightbox": "^2.7.5",
     "vue-final-modal": "^4.3.1",
     "vue3-carousel": "^0.3.0"
   },
