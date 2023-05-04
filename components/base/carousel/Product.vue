@@ -1,8 +1,5 @@
 <template>
   <div class="">
-    <CoolLightBox :items="items" :index="index" @close="index = null">
-    </CoolLightBox>
-
     <Carousel
       id="gallery"
       :items-to-show="1"
@@ -62,12 +59,10 @@ export default {
         description: "Photo by Lucas",
         src: "https://digital-assets.tecalliance.services/images/800/5f3bc79adf31743c79954e3f18bf197f71d53c95.jpg",
       },
-      
     ],
   }),
   methods: {
     slideTo(val) {
-      console.log(val);
       this.currentSlide = val;
     },
   },
@@ -75,7 +70,6 @@ export default {
 </script>
 
 <style scoped>
-
 #thumbnails {
   max-width: 450px;
   margin-top: 30px;

@@ -9,13 +9,10 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  categories: {
-    type: Array,
-    required: true,
-  },
-});
+import { useCatalogStore } from "~/store/catalog";
+import { storeToRefs } from "pinia";
 
-const {categories} = toRefs(props)
+const store = useCatalogStore();
 
+const { categories } = storeToRefs(store);
 </script>

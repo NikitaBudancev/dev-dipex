@@ -485,16 +485,23 @@ export const useCatalogStore = defineStore("catalogStore", () => {
 
 
   const fetchProduct = async () => {
-    const { data } = await useFetch(
+    const { pending, data } = await useLazyFetch(
       "https://api.dipex.lv/api/rest/v1/products/get/",
       {
         method: "GET",
       }
     );
 
+    const test = await data.value
+
+    console.log()
+
     if (data.value) {
       products.value = data.value.products;
       pagination.value = data.value.pagination;
+
+      // console.log(products.value)
+
     } else {
       console.log("empty");
     }

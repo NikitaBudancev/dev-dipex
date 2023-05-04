@@ -222,7 +222,10 @@
                 />
               </svg>
             </span>
-            <span class="block text-ellipsis whitespace-nowrap overflow-hidden max-w-[110px]">Никита Буданцев test</span>
+            <span
+              class="block text-ellipsis whitespace-nowrap overflow-hidden max-w-[110px]"
+              >Никита Буданцев test</span
+            >
           </span>
         </button>
 
@@ -250,7 +253,7 @@
           >
             <li>
               <NuxtLink
-                to="#"
+                :to="localePath('/personal/orders/')"
                 @click="closeDropdown"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >Текущие заказы</NuxtLink
@@ -258,7 +261,7 @@
             </li>
             <li>
               <NuxtLink
-                to="#"
+                :to="localePath('/personal/private/')"
                 @click="closeDropdown"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >Личные данные</NuxtLink
@@ -266,7 +269,7 @@
             </li>
             <li>
               <NuxtLink
-                to="#"
+                :to="localePath('/personal/orders/')"
                 @click="closeDropdown"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >История заказов</NuxtLink
@@ -274,7 +277,7 @@
             </li>
             <li>
               <NuxtLink
-                to="#"
+                :to="localePath('/personal/cart/')"
                 @click="closeDropdown"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >Корзина</NuxtLink
@@ -282,7 +285,7 @@
             </li>
             <li>
               <NuxtLink
-                to="#"
+                :to="localePath('/about/contacts/')"
                 @click="closeDropdown"
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >Контакты</NuxtLink
@@ -301,7 +304,6 @@
       </div>
     </div>
   </header>
-  <PopoverMain />
 </template>
 
 <script setup>

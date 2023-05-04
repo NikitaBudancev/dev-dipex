@@ -24,7 +24,7 @@
             <BaseProductFilter />
           </div>
           <div class="w-9/12">
-            <BaseProductList />
+            <BaseProductList :data="data"/>
           </div>
         </div>
       </div>
@@ -38,6 +38,9 @@ test3
 </template>
 
 <script setup lang="ts">
+
+const { pending, data } = await useProducts();
+
 const tabs = ref(["ЗАМЕНИТЕЛИ", "OEM НОМЕРА", "ПРИМЕНЯЕТСЯ К МОДЕЛИ"]);
 const activeTab = ref(0);
 
