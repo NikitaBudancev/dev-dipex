@@ -1,11 +1,9 @@
 module.exports = {
   apps: [
     {
-      name: 'dev-dipex',
-      exec_mode: 'cluster',
-      instances: 'max', // Or a number of instances
-      script: './node_modules/nuxt/bin/nuxt.js',
-      args: 'start'
-    }
-  ]
-}
+      name: "dev-dipex",
+      script: ".output/server/index.mjs",
+      port: 3000,
+    },
+  ],
+};
