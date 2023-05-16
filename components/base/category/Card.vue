@@ -11,7 +11,7 @@
     >
       {{ item.title }}
     </NuxtLink>
-    <div class="category-item__body">
+    <div class="category-item__body max-w-[300px]">
       <ul class="mb-2">
         <li
           class="text-sm text-gray-500 mb-1"

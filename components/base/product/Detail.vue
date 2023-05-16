@@ -162,8 +162,8 @@
     </div>
     <div class="flex-1 max-w-[300px]">
       <div class="flex justify-between items-center mb-3">
-        <BaseProductBrandLogo />
-        <BaseProductRating />
+        <BaseProductBrandLogo :id="1" tooltipText="ABAKUS" imgPath="https://dipex.lv/images/brands/10100001.jpg"/>
+        <BaseProductRating :id="2" tooltipText="Bысокий класс" :rating="3"/>
       </div>
       <div class="icon-text mb-1">
         <svg

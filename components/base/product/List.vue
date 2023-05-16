@@ -9,16 +9,22 @@
 </template>
 
 <script setup lang="ts">
-  const props = defineProps({
-    data: {
-      type: Object,
-      required: true
-    }
-  })
+import { onMounted } from 'vue'
+import { initTooltips } from 'flowbite'
 
-  const {data} = toRefs(props)
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initTooltips();
+})
+const props = defineProps({
+  data: {
+    type: Object,
+    required: true,
+  },
+});
 
-  const products = data.value.products
-  const pagination = data.value.pagination
+const { data } = toRefs(props);
 
+const products = data.value.products;
+const pagination = data.value.pagination;
 </script>

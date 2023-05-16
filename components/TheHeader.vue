@@ -111,15 +111,6 @@
               ></path>
             </svg>
           </button>
-          <div data-is-auth="" class="favorites-block" style="display: none">
-            <div>
-              <div class="main-header__garage-no-auth">
-                <a href="/auth/?login=yes">Войдите</a> или
-                <a href="/auth/registartion/?register=yes">зарегистрируйтесь</a>
-                для использования избранного
-              </div>
-            </div>
-          </div>
         </div>
         <div class="h-6">
           <button class="relative">
@@ -195,8 +186,10 @@
           class="icon-text text-xs"
           id="avatarButton"
           type="button"
-          data-dropdown-toggle="userDropdown"
-          data-dropdown-placement="bottom-start"
+          :data-dropdown-toggle="isAuthorized ? 'userDropdown' : ''"
+          :data-dropdown-placement="isAuthorized ? 'bottom-start' : ''"
+          :data-modal-target="!isAuthorized ? 'authentication-modal' : ''"
+          :data-modal-toggle="!isAuthorized ? 'authentication-modal' : ''"
         >
           <img
             class="rounded-full cursor-pointer"
@@ -224,90 +217,103 @@
             </span>
             <span
               class="block text-ellipsis whitespace-nowrap overflow-hidden max-w-[110px]"
-              >Никита Буданцев test</span
+              >{{ profileName }}</span
             >
           </span>
         </button>
 
         <!-- Dropdown menu -->
         <div
-          id="userDropdown"
           class="z-10 hidden bg-white divide-y divide-gray-100 border border-gray-100 rounded-lg shadow-2xl w-60 dark:bg-gray-700 dark:divide-gray-600"
+          id="userDropdown"
+          v-if="isAuthorized"
         >
-          <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-            <NuxtLink
-              class="flex items-center gap-2"
-              :to="localePath('/personal/')"
+          <div>
+            <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+              <NuxtLink
+                class="flex items-center gap-2"
+                :to="localePath('/personal/')"
+              >
+                <span
+                  class="flex items-center justify-center w-8 h-8 border border-gray-200 rounded-full bg-gray-100 font-semibold text-gray-700"
+                  >Н</span
+                >
+                <span>Никита Буданцев</span>
+              </NuxtLink>
+            </div>
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="avatarButton"
             >
-              <span
-                class="flex items-center justify-center w-8 h-8 border border-gray-200 rounded-full bg-gray-100 font-semibold text-gray-700"
-                >Н</span
-              >
-              <span>Никита Буданцев</span>
-            </NuxtLink>
-            <!-- <div class="font-medium truncate">Войти</div> -->
-          </div>
-          <ul
-            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-            aria-labelledby="avatarButton"
-          >
-            <li>
-              <NuxtLink
-                :to="localePath('/personal/orders/')"
+              <li>
+                <NuxtLink
+                  :to="localePath('/personal/orders/')"
+                  @click="closeDropdown"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Текущие заказы</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  :to="localePath('/personal/private/')"
+                  @click="closeDropdown"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Личные данные</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  :to="localePath('/personal/orders/')"
+                  @click="closeDropdown"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >История заказов</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  :to="localePath('/personal/cart/')"
+                  @click="closeDropdown"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Корзина</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink
+                  :to="localePath('/about/contacts/')"
+                  @click="closeDropdown"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Контакты</NuxtLink
+                >
+              </li>
+            </ul>
+            <div class="py-1">
+              <a
+                href="#"
                 @click="closeDropdown"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Текущие заказы</NuxtLink
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >Выйти</a
               >
-            </li>
-            <li>
-              <NuxtLink
-                :to="localePath('/personal/private/')"
-                @click="closeDropdown"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Личные данные</NuxtLink
-              >
-            </li>
-            <li>
-              <NuxtLink
-                :to="localePath('/personal/orders/')"
-                @click="closeDropdown"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >История заказов</NuxtLink
-              >
-            </li>
-            <li>
-              <NuxtLink
-                :to="localePath('/personal/cart/')"
-                @click="closeDropdown"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Корзина</NuxtLink
-              >
-            </li>
-            <li>
-              <NuxtLink
-                :to="localePath('/about/contacts/')"
-                @click="closeDropdown"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Контакты</NuxtLink
-              >
-            </li>
-          </ul>
-          <div class="py-1">
-            <a
-              href="#"
-              @click="closeDropdown"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-              >Выйти</a
-            >
+            </div>
           </div>
         </div>
       </div>
     </div>
   </header>
+  <BaseModalAuth formName="login" />
 </template>
 
 <script setup>
 const localePath = useLocalePath();
+
+import { useUserStore } from "~/store/user";
+import { storeToRefs } from "pinia";
+
+const store = useUserStore();
+const { isAuthorized } = storeToRefs(store);
+
+const profileName = computed(() =>
+  isAuthorized.value ? "Никита Буданцев" : "Авторизоваться"
+);
 
 const dropdown = ref();
 const closeDropdown = ref(() => {});

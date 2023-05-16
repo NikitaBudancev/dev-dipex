@@ -1,21 +1,33 @@
 <template>
-  <div
-    class="product-item-brand__rating product-item-brand__rating_hide-mobile tooltip__btn"
-  >
-    <div>
-      <Rating :rating="4" data-tooltip-target="tooltip-default-1" />
-    </div>
-    <div
-      id="tooltip-default-1"
-      role="tooltip"
-      class="absolute z-10 invisible inline-block px-3 py-1 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-    >
-      Средний класс
-      <div class="tooltip-arrow" data-popper-arrow></div>
-    </div>
-  </div>
+  <BaseTooltipMain :tooltip="{ id: props.id, text: props.tooltipText, tooltipId }">
+    <Rating
+      :rating="props.rating"
+      :data-tooltip-target="tooltipId"
+    />
+  </BaseTooltipMain>
 </template>
 
 <script setup lang="ts">
 import { Rating } from "flowbite-vue";
+
+const props = defineProps({
+  id: {
+    required: true,
+    type: Number,
+  },
+
+  rating: {
+    required: true,
+    type: Number,
+  },
+
+  tooltipText: {
+    required: true,
+    type: String,
+  },
+
+});
+
+const tooltipId = `tooltip-rating-${props.id}`;
+
 </script>

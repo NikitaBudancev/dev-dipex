@@ -1,18 +1,29 @@
 <template>
-  <div class="product-item-brand__logo-block tooltip__btn relative">
-    <button data-tooltip-target="tooltip-default" type="button">
-      <img
-        src="https://dipex.lv/images/brands/465717018.jpg"
-        class="h-7"
-      />
+  <BaseTooltipMain :tooltip="{ id: props.id, text: props.tooltipText, tooltipId }">
+    <button :data-tooltip-target="tooltipId" type="button">
+      <img class="h-7" :src="props.imgPath" />
     </button>
-    <div
-      id="tooltip-default"
-      role="tooltip"
-      class="absolute z-10 invisible inline-block px-3 py-1 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-    >
-      ABAKUS
-      <div class="tooltip-arrow" data-popper-arrow></div>
-    </div>
-  </div>
+  </BaseTooltipMain>
 </template>
+
+<script setup lang="ts">
+const props = defineProps({
+  id: {
+    required: true,
+    type: Number,
+  },
+
+  imgPath: {
+    type: String,
+    required: true,
+  },
+
+  tooltipText: {
+    required: true,
+    type: String,
+  },
+});
+
+const tooltipId = `tooltip-brand-${props.id}`;
+
+</script>

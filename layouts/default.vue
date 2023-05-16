@@ -15,7 +15,6 @@
 
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite";
-import { ref } from "vue";
 
 onMounted(() => {
   initFlowbite();

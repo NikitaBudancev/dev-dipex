@@ -18,7 +18,7 @@
                 alt=""
               />
             </div>
-            <BaseProductBrandLogo />
+            <BaseProductBrandLogo :id="product.id" tooltipText="ABAKUS" imgPath="https://dipex.lv/images/brands/10100001.jpg"/>
           </div>
 
           <div>
@@ -54,7 +54,7 @@
                 data-empty="1"
                 data-fill="4"
               >
-                <BaseProductRating />
+                <BaseProductRating :id="product.id" :rating="4" tooltipText="Высокий класс"/>
                 <BaseProductPrice />
 
                 <div class="flex gap-4 items-center w-full justify-end">
@@ -204,6 +204,7 @@
         </span>
       </span>
     </div>
+
   </div>
 </template>
 
