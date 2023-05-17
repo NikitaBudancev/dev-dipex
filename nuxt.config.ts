@@ -58,7 +58,7 @@ export default defineNuxtConfig({
     // lazy: true,
     langDir: "langs",
     strategy: "prefix_except_default",
-    defaultLocale: "lv",
+    defaultLocale: "ru",
     locales: [
       {
         code: "lv",
