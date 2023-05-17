@@ -79,12 +79,14 @@ export default defineNuxtConfig({
         name: "Lithuanian",
         file: "lt.json",
         icon: "lt.svg",
+        domain: 'chmuk.ru/lt/'
       },
       {
         code: "et",
         name: "Estonian",
         file: "et.json",
         icon: "ee.svg",
+        domain: 'chmuk.ru/et/'
       },
     ],
     differentDomains: true,
