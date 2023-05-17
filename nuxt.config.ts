@@ -12,6 +12,15 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  runtimeConfig: {
+    // can be overridden by NUXT_* environment variable
+    apiSecret: "", 
+    public: {
+      apiBase: "",
+    }
+  },
+
   css: ["~/assets/css/main.css"],
   postcss: {
     plugins: {
@@ -56,12 +65,14 @@ export default defineNuxtConfig({
         name: "Latvian",
         file: "lv.json",
         icon: "lv.svg",
+        domain: 'chmuk.online'
       },
       {
         code: "ru",
         name: "Russian",
         file: "ru.json",
         icon: "ru.svg",
+        domain: 'chmuk.ru'
       },
       {
         code: "lt",
@@ -76,6 +87,7 @@ export default defineNuxtConfig({
         icon: "ee.svg",
       },
     ],
+    differentDomains: true,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",

@@ -1,11 +1,21 @@
 export const useProducts = async () => {
+  const config = useRuntimeConfig();
+
   try {
-    const baseURL = "https://api.dipex.lv/api/rest/v1/products/get/";
+    const baseURL = `${config.public.apiBase}/products/get/`;
     const defaultProducts = () => [];
 
     const { pending, data } = await useLazyFetch(baseURL, {
       default: defaultProducts,
+      // method: "POST",
+      // body: {
+      //   category_id: 100380,
+      //   language: "ru",
+      //   site: "s1",
+      // },
     });
+
+    console.log(data);
 
     return {
       pending,

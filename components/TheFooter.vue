@@ -11,7 +11,7 @@
               <p>Хотите задать вопрос? Мы вам поможем!</p>
             </div>
             <div class="footer-button">
-              <a href="/rutest" class="btn">Написать нам</a>
+              <a href="/rutest" class="btn justify-center">Написать нам</a>
             </div>
           </div>
         </div>
