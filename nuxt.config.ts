@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     // can be overridden by NUXT_* environment variable
     apiSecret: "", 
     public: {
-      apiBase: "",
+      apiBase: process.env.NUXT_PUBLIC_API_BASE,
     }
   },
 
