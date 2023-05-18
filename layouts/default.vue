@@ -1,5 +1,5 @@
 <template>
-  <NuxtLoadingIndicator color="orange"/>
+  <NuxtLoadingIndicator color="orange" />
   <div class="page">
     <TheHeader />
     <div class="content">
@@ -12,7 +12,6 @@
 </template>
 
 <script setup lang="ts">
-
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite";
 

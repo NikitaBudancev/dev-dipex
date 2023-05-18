@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .appearance-none-input::-webkit-outer-spin-button,
@@ -18,7 +18,7 @@ button {
 }
 
 /* Firefox */
-.appearance-none-input[type=number] {
+.appearance-none-input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -49,4 +49,35 @@ button {
 
 .sup-icon {
   @apply flex justify-center items-center absolute -top-2 left-1/2 bg-amber-500 w-5 h-5 rounded-full text-white;
+}
+
+.accordion__item {
+  @apply border border-gray-200;
+}
+
+.accordion__button {
+  @apply flex items-start justify-between w-full px-4 py-3 font-medium text-left text-gray-500 border-gray-200;
+}
+
+.accordion__content {
+  @apply border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-900;
+}
+
+.scroll-grey::-webkit-scrollbar {
+  width: 10px;
+  padding: 2px;
+}
+
+.scroll-grey::-webkit-scrollbar-track {
+  background: #fafafa;
+  border-radius: 19px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+.scroll-grey::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  border: 2px solid #fafafa;
+  width: 5px;
 }

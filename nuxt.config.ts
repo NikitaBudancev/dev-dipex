@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     // can be overridden by NUXT_* environment variable
     apiSecret: "", 
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_BASE,
+      apiBase: "",
     }
   },
 
@@ -58,38 +58,34 @@ export default defineNuxtConfig({
     // lazy: true,
     langDir: "langs",
     strategy: "prefix_except_default",
-    defaultLocale: "ru",
+    defaultLocale: "lv",
     locales: [
       {
         code: "lv",
         name: "Latvian",
         file: "lv.json",
         icon: "lv.svg",
-        domain: 'chmuk.online'
       },
       {
         code: "ru",
         name: "Russian",
         file: "ru.json",
         icon: "ru.svg",
-        domain: 'chmuk.ru'
       },
       {
         code: "lt",
         name: "Lithuanian",
         file: "lt.json",
         icon: "lt.svg",
-        domain: 'chmuk.ru/lt/'
       },
       {
         code: "et",
         name: "Estonian",
         file: "et.json",
         icon: "ee.svg",
-        domain: 'chmuk.ru/et/'
       },
     ],
-    differentDomains: true,
+    
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
