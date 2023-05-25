@@ -1,37 +1,39 @@
-export default defineI18nConfig((nuxt) => ({
-  legacy: false,
+import { et, lt, lv, ru } from "langs";
+
+export const I18N = {
   langDir: "langs",
   strategy: "prefix_except_default",
   defaultLocale: "lv",
   locales: [
     {
-      code: "ru",
-      name: "Russian",
-      file: "ru.json",
-      icon: "ru.svg",
-    },
-    {
       code: "lv",
       name: "Latvian",
-      file: "lv.json",
       icon: "lv.svg",
+    },
+    {
+      code: "ru",
+      name: "Russian",
+      icon: "ru.svg",
     },
     {
       code: "lt",
       name: "Lithuanian",
-      file: "lt.json",
       icon: "lt.svg",
     },
     {
       code: "et",
       name: "Estonian",
-      file: "et.json",
       icon: "ee.svg",
     },
   ],
+
+  vueI18n: {
+    messages: { et, lt, lv, ru },
+  },
+
   detectBrowserLanguage: {
     useCookie: true,
     cookieKey: "i18n_redirected",
     redirectOn: "root", // recommended
   },
-}));
+};
