@@ -4,7 +4,7 @@
     <TheHeader />
     <div class="content">
       <TheTopMenu />
-      <BaseBredcrumbsDefault v-if="$route.path !== '/'" />
+      <TheBreadcrumb v-if="$route.path !== '/'" />
       <slot />
     </div>
     <TheFooter />

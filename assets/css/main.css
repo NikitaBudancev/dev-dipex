@@ -3,6 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+.btn {
+  @apply flex py-5 px-14 text-center text-white bg-amber-500 font-bold rounded-lg hover:bg-amber-500/90 border-0;
+}
+
+.btn-small {
+  @apply flex py-2 px-6 rounded-md font-semibold;
+}
+
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -37,14 +49,6 @@ button {
 
 .icon-text {
   @apply flex gap-2 items-center;
-}
-
-.btn {
-  @apply flex py-5 px-14 text-center text-white bg-amber-500 font-bold rounded-lg hover:bg-amber-500/90 border-0;
-}
-
-.btn-small {
-  @apply flex py-2 px-6 rounded-md font-semibold;
 }
 
 .sup-icon {

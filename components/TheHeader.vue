@@ -333,19 +333,6 @@ const profileName = computed(() =>
   isAuthorized.value ? "Никита Буданцев" : "Авторизоваться"
 );
 
-const dropdown = ref();
 const closeDropdown = ref(() => {});
 
-onMounted(() => {
-  const $targetEl = document.getElementById("userDropdown");
-  const $triggerEl = document.getElementById("avatarButton");
-  const options = {};
-
-  if ($targetEl) {
-    dropdown.value = new Dropdown($targetEl, $triggerEl, options);
-    closeDropdown.value = () => {
-      dropdown.value.hide();
-    };
-  }
-});
 </script>

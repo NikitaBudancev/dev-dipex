@@ -3,8 +3,8 @@
     <div class="mb-5">
       <NuxtLink
         class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-        to="/personal/orders/history/"
-        >Посмотреть историю заказов</NuxtLink
+        to="/personal/orders/"
+        >Посмотреть текущие заказы</NuxtLink
       >
     </div>
     <div class="text-xl mb-3">Заказы в статусе «Принят»</div>
