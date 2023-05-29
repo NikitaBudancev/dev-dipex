@@ -2,20 +2,20 @@
   <div class="flex flex-col gap-5">
     <BaseProductCard
       v-for="product in products"
-      :product="product"
       :key="product.id"
+      :product="product"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { initTooltips } from 'flowbite'
+import { onMounted } from "vue";
+import { initTooltips } from "flowbite";
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-    initTooltips();
-})
+  initTooltips();
+});
 const props = defineProps({
   data: {
     type: Object,

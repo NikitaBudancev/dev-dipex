@@ -14,9 +14,9 @@
     <div class="category-item__body max-w-[300px]">
       <ul class="mb-2">
         <li
-          class="text-sm text-gray-500 mb-1"
           v-for="category in item.subCategories"
           :key="category.id"
+          class="text-sm text-gray-500 mb-1"
         >
           <NuxtLink
             class="hover:text-blue-600"

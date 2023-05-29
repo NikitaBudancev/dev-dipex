@@ -10,7 +10,7 @@
 const route = useRoute();
 const isCategory = ref("");
 
-let lengthRoutes = route.params.slug.length;
+const lengthRoutes = route.params.slug.length;
 
 switch (lengthRoutes) {
   case 4:

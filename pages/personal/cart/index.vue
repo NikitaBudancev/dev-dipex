@@ -5,7 +5,9 @@
         <div class="text-lg">Итого:</div>
         <div class="text-2xl font-semibold">5.84 €</div>
         <div>
-          <NuxtLink class="btn py-3" to="/personal/order/make/">Оформить заказ</NuxtLink>
+          <NuxtLink class="btn py-3" to="/personal/order/make/"
+            >Оформить заказ</NuxtLink
+          >
         </div>
       </div>
     </div>
@@ -32,8 +34,8 @@
               </svg>
             </div>
             <input
-              type="text"
               id="input-group-search"
+              type="text"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Фильтр"
             />
@@ -44,9 +46,9 @@
     </div>
     <div class="flex flex-col gap-3">
       <div
-        class="bg-white px-5 py-4 rounded-lg shadow-sm"
         v-for="n in 5"
         :key="n"
+        class="bg-white px-5 py-4 rounded-lg shadow-sm"
       >
         <div class="flex items-center justify-between">
           <div class="max-w-[100px]">

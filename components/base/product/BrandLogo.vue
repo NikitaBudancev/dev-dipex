@@ -1,5 +1,7 @@
 <template>
-  <BaseTooltipMain :tooltip="{ id: props.id, text: props.tooltipText, tooltipId }">
+  <BaseTooltipMain
+    :tooltip="{ id: props.id, text: props.tooltipText, tooltipId }"
+  >
     <button :data-tooltip-target="tooltipId" type="button">
       <img class="h-7" :src="props.imgPath" />
     </button>
@@ -25,5 +27,4 @@ const props = defineProps({
 });
 
 const tooltipId = `tooltip-brand-${props.id}`;
-
 </script>

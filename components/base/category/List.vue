@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import { useCatalogStore } from "~/store/catalog";
 import { storeToRefs } from "pinia";
+import { useCatalogStore } from "~/store/catalog";
 
 const store = useCatalogStore();
 

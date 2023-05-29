@@ -74,7 +74,9 @@
               <div class="font-semibold">
                 Заказ 89179 created on 04.05.2023, Принят
               </div>
-              <div>Сумма заказа: <span class="font-semibold">19.21 €</span></div>
+              <div>
+                Сумма заказа: <span class="font-semibold">19.21 €</span>
+              </div>
             </div>
           </div>
           <div class="flex gap-32 style-line px-10 py-5">
@@ -94,7 +96,9 @@
                     >Не оплачено</span
                   >
                 </div>
-                <div>Сумма счета: <span class="font-semibold">19.21 €</span></div>
+                <div>
+                  Сумма счета: <span class="font-semibold">19.21 €</span>
+                </div>
                 <div class="py-3">
                   <button class="font-medium text-blue-600 hover:text-blue-500">
                     <span class="flex items-center">
@@ -192,7 +196,7 @@
               <div class="flex justify-end w-40 py-2">Количество</div>
               <div class="flex justify-end w-40 py-2">Всего</div>
             </div>
-            <div class="flex justify-between border-b" v-for="n in 5" :key="n">
+            <div v-for="n in 5" :key="n" class="flex justify-between border-b">
               <div class="flex-1 px-5 py-2">
                 <NuxtLink
                   class="flex items-center gap-5 font-medium text-blue-600 hover:text-blue-500"
@@ -214,9 +218,7 @@
               >
                 1.21 €
               </div>
-              <div class="flex items-center justify-end w-40 py-2">
-                4 шт.
-              </div>
+              <div class="flex items-center justify-end w-40 py-2">4 шт.</div>
               <div
                 class="flex items-center justify-end w-40 py-2 font-semibold"
               >

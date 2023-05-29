@@ -129,7 +129,7 @@
   position: relative;
 }
 .contact-header:after {
-  content: '';
+  content: "";
   display: block;
   width: 20px;
   height: 20px;

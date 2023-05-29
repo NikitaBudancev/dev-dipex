@@ -34,11 +34,7 @@
                   />
                   <span class="text-clip-text">Тормозная система</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -58,11 +54,7 @@
                     >Информационная / коммуникационная система</span
                   >
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -80,11 +72,7 @@
                   />
                   <span class="text-clip-text">Двигатель</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -102,11 +90,7 @@
                   />
                   <span class="text-clip-text">Фильтр</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -124,11 +108,7 @@
                   />
                   <span class="text-clip-text">Электрооборудование</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -148,11 +128,7 @@
                     >Подвеска оси / система подвески / колеса</span
                   >
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -172,11 +148,7 @@
                     >Система зажигания/накаливания</span
                   >
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -194,11 +166,7 @@
                   />
                   <span class="text-clip-text">Система очистки окон</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -216,11 +184,7 @@
                   />
                   <span class="text-clip-text">Рулевое управление</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -240,11 +204,7 @@
                     >Система сцепления / навесные части</span
                   >
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -262,11 +222,7 @@
                   />
                   <span class="text-clip-text">Тормозная система</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -284,11 +240,7 @@
                   />
                   <span class="text-clip-text">Ременный привод</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -306,11 +258,7 @@
                   />
                   <span class="text-clip-text">Система подачи топлива</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -328,11 +276,7 @@
                   />
                   <span class="text-clip-text">Тормозная система</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -352,11 +296,7 @@
                     >Информационная / коммуникационная система</span
                   >
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -374,11 +314,7 @@
                   />
                   <span class="text-clip-text">Двигатель</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -396,11 +332,7 @@
                   />
                   <span class="text-clip-text">Фильтр</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -418,11 +350,7 @@
                   />
                   <span class="text-clip-text">Электрооборудование</span>
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
             <li class="m-0">
@@ -442,11 +370,7 @@
                     >Подвеска оси / система подвески / колеса</span
                   >
                 </span>
-                <img
-                  src="/images/icons/chevron-right.svg"
-                  width="10"
-                  alt=""
-                />
+                <img src="/images/icons/chevron-right.svg" width="10" alt="" />
               </a>
             </li>
           </ul>
@@ -471,29 +395,29 @@
   </div>
 
   <button
-    @click="showModal"
     type="button"
     class="mt-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    @click="showModal"
   >
     Show modal
   </button>
-  <Modal :size="size" v-if="isShowModal" @close="closeModal" size="xs">
+  <Modal v-if="isShowModal" :size="size" size="xs" @close="closeModal">
     <template #body>
       <BaseFormLogin />
     </template>
     <template #footer>
       <div class="flex justify-between">
         <button
-          @click="closeModal"
           type="button"
           class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+          @click="closeModal"
         >
           Decline
         </button>
         <button
-          @click="closeModal"
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          @click="closeModal"
         >
           I accept
         </button>
@@ -503,10 +427,9 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { initFlowbite } from "flowbite";
 import { Modal } from "flowbite-vue";
-import { ref } from "vue";
 
 onMounted(() => {
   initFlowbite();

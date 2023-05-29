@@ -15,12 +15,10 @@
 </template>
 
 <script setup lang="ts">
-
 const props = defineProps({
-  tooltip : {
+  tooltip: {
     required: true,
     type: Object,
-  }
-})
-
+  },
+});
 </script>

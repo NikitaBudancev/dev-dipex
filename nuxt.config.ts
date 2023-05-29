@@ -15,10 +15,10 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // can be overridden by NUXT_* environment variable
-    apiSecret: "", 
+    apiSecret: "",
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE,
-    }
+    },
   },
 
   css: ["~/assets/css/main.css"],
@@ -85,7 +85,7 @@ export default defineNuxtConfig({
         icon: "ee.svg",
       },
     ],
-    
+
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",

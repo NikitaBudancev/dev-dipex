@@ -27,8 +27,8 @@
       </button>
     </div>
     <div
-      class=""
       :id="`accordion-open-body-${accordionId}`"
+      class=""
       :aria-labelledby="`accordion-open-heading-${accordionId}`"
     >
       <div :class="classContent ?? 'accordion__content'">

@@ -243,10 +243,10 @@
                     >
                       <div class="inline-flex items-center">
                         <svg
+                          id="flag-icon-css-us"
                           aria-hidden="true"
                           class="h-3.5 w-3.5 rounded-full mr-2"
                           xmlns="http://www.w3.org/2000/svg"
-                          id="flag-icon-css-us"
                           viewBox="0 0 512 512"
                         >
                           <g fill-rule="evenodd">
@@ -286,10 +286,10 @@
                     >
                       <div class="inline-flex items-center">
                         <svg
+                          id="flag-icon-css-de"
                           aria-hidden="true"
                           class="h-3.5 w-3.5 rounded-full mr-2"
                           xmlns="http://www.w3.org/2000/svg"
-                          id="flag-icon-css-de"
                           viewBox="0 0 512 512"
                         >
                           <path fill="#ffce00" d="M0 341.3h512V512H0z" />
@@ -308,10 +308,10 @@
                     >
                       <div class="inline-flex items-center">
                         <svg
+                          id="flag-icon-css-it"
                           aria-hidden="true"
                           class="h-3.5 w-3.5 rounded-full mr-2"
                           xmlns="http://www.w3.org/2000/svg"
-                          id="flag-icon-css-it"
                           viewBox="0 0 512 512"
                         >
                           <g fill-rule="evenodd" stroke-width="1pt">
@@ -332,11 +332,11 @@
                     >
                       <div class="inline-flex items-center">
                         <svg
+                          id="flag-icon-css-cn"
                           aria-hidden="true"
                           class="h-3.5 w-3.5 rounded-full mr-2"
                           xmlns="http://www.w3.org/2000/svg"
                           xmlns:xlink="http://www.w3.org/1999/xlink"
-                          id="flag-icon-css-cn"
                           viewBox="0 0 512 512"
                         >
                           <defs>
@@ -386,8 +386,8 @@
               </div>
               <div class="relative w-full">
                 <input
-                  type="tel"
                   id="location-search"
+                  type="tel"
                   class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
                   required
                 />
@@ -469,8 +469,8 @@
         <ul class="flex flex-col gap-3">
           <li v-for="n in 4" :key="n">
             <input
-              type="radio"
               :id="`small-${n}`"
+              type="radio"
               name="test"
               value=""
               class="hidden peer"
@@ -517,8 +517,8 @@
         <ul class="flex flex-col gap-3">
           <li v-for="n in 2" :key="n">
             <input
-              type="radio"
               :id="`small2-${n}`"
+              type="radio"
               name="test"
               value=""
               class="hidden peer"
@@ -544,7 +544,7 @@
       </div>
       <div class="bg-white px-5 py-4 rounded-lg shadow-sm flex flex-col gap-3">
         <div class="text-xl font-semibold mb-5">Название товара</div>
-        <div class="" v-for="n in 5" :key="n">
+        <div v-for="n in 5" :key="n" class="">
           <div class="flex items-center justify-between gap-4">
             <div class="max-w-[100px]">
               <img
@@ -585,8 +585,8 @@
       <div class="bg-white px-5 py-4 rounded-lg shadow-sm">
         <div class="flex items-center mb-3">
           <input
-            checked
             id="checked-checkbox"
+            checked
             type="checkbox"
             value=""
             class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
@@ -612,11 +612,8 @@
         >
 
         <div class="mt-5">
-          <button class="btn py-3">
-            Оформить заказ
-          </button>
+          <button class="btn py-3">Оформить заказ</button>
         </div>
-        
       </div>
     </div>
   </form>

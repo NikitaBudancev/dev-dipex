@@ -10,9 +10,9 @@
     <div class="text-xl mb-3">Заказы в статусе «Принят»</div>
     <div class="flex flex-col gap-5">
       <div
-        class="border border-gray-300 overflow-hidden pb-3 rounded shadow-md"
         v-for="n in 5"
         :key="n"
+        class="border border-gray-300 overflow-hidden pb-3 rounded shadow-md"
       >
         <div class="px-5 py-2 bg-lime-200 font-semibold">
           Заказ №89179 от 04.05.2023, 4 товара на сумму 19.21 €
@@ -36,7 +36,10 @@
                     >Не оплачено</span
                   >
                 </div>
-                <div>Сумма к оплате по счету: <span class="font-semibold">19.21 €</span></div>
+                <div>
+                  Сумма к оплате по счету:
+                  <span class="font-semibold">19.21 €</span>
+                </div>
                 <div class="mt-2">
                   <button
                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline"

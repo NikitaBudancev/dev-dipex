@@ -133,7 +133,7 @@
     </div>
   </section>
   <section>
-    <BaseCategoryList :categories="categories"/>
+    <BaseCategoryList :categories="categories" />
     <div class="flex justify-center mt-8">
       <a class="btn" href="/catalog/rezerves-dalas/">Больше разделов</a>
     </div>
@@ -141,15 +141,13 @@
   <section>
     <BaseTabsMain />
   </section>
-
-  
-
-
 </template>
 
+<script></script>
 
 <script>
-
+import { storeToRefs } from "pinia";
+import { useCatalogStore } from "~/store/catalog";
 export default {
   data() {
     return {
@@ -176,12 +174,7 @@ export default {
     };
   },
 };
-</script>
 
-<script setup>
-import { useCatalogStore } from '~/store/catalog'
-import { storeToRefs } from 'pinia'
-
-const catalogStore = useCatalogStore()
-const { categories } = storeToRefs(catalogStore)
+const catalogStore = useCatalogStore();
+const { categories } = storeToRefs(catalogStore);
 </script>

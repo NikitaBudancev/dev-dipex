@@ -12,16 +12,18 @@
         <div class="col-lg-12">
           <div class="filter__body">
             <BaseAccordionMain
-              className="flex flex-col gap-5"
               id="accordion-filter"
+              class-name="flex flex-col gap-5"
             >
               <BaseAccordionItem
-                classButton="accordion__button rounded-t-lg"
-                classContent="accordion__content rounded-b-lg"
+                class-button="accordion__button rounded-t-lg"
+                class-content="accordion__content rounded-b-lg"
               >
                 <template #head>
                   <div>
-                    <NuxtLink class="mb-2 block" to="/catalog">Категории</NuxtLink>
+                    <NuxtLink class="mb-2 block" to="/catalog"
+                      >Категории</NuxtLink
+                    >
                     <ul class="text-gray-800">
                       <li>
                         <a class="icon-text" href="#">
@@ -74,8 +76,8 @@
                 <BaseProductFilterCategory />
               </BaseAccordionItem>
               <BaseAccordionItem
-                classButton="accordion__button rounded-t-lg"
-                classContent="accordion__content  rounded-b-lg max-h-[300px] overflow-x-auto scroll-grey mr-1 px-4 py-3"
+                class-button="accordion__button rounded-t-lg"
+                class-content="accordion__content  rounded-b-lg max-h-[300px] overflow-x-auto scroll-grey mr-1 px-4 py-3"
               >
                 <template #head>Бренд</template>
                 <BaseProductFilterBrand />

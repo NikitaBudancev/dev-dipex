@@ -31,13 +31,28 @@
               компанией Paysera)
             </p>
             <div class="https://dipex.lvpayments_logo">
-              <img src="https://dipex.lv/images/payment/Citadele_logo.png" alt="" />
-              <img src="https://dipex.lv/images/payment/Maestro_logo.png" alt="" />
+              <img
+                src="https://dipex.lv/images/payment/Citadele_logo.png"
+                alt=""
+              />
+              <img
+                src="https://dipex.lv/images/payment/Maestro_logo.png"
+                alt=""
+              />
               <img src="https://dipex.lv/images/payment/SEB.png" alt="" />
               <img src="https://dipex.lv/images/payment/Swedbank.png" alt="" />
-              <img src="https://dipex.lv/images/payment/luminor-logo.svg" alt="" />
-              <img src="https://dipex.lv/images/payment/master_card.png" alt="" />
-              <img src="https://dipex.lv/images/payment/paysera_logo.png" alt="" />
+              <img
+                src="https://dipex.lv/images/payment/luminor-logo.svg"
+                alt=""
+              />
+              <img
+                src="https://dipex.lv/images/payment/master_card.png"
+                alt=""
+              />
+              <img
+                src="https://dipex.lv/images/payment/paysera_logo.png"
+                alt=""
+              />
               <img src="https://dipex.lv/images/payment/visa.png" alt="" />
             </div>
           </div>

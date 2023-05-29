@@ -2,9 +2,9 @@
   <div class="">
     <Carousel
       id="gallery"
+      v-model="currentSlide"
       :items-to-show="1"
       :wrap-around="true"
-      v-model="currentSlide"
     >
       <Slide v-for="(slide, imageIndex) in slides" :key="imageIndex">
         <div class="carousel__item" @click="index = imageIndex">
@@ -15,13 +15,13 @@
 
     <div class="nav-slider flex gap-2 flex-wrap justify-center mt-7">
       <button
-        class="w-14 h-14 border-2 rounded-lg p-1"
         v-for="(slide, imageIndex) in slides"
         :key="imageIndex"
-        @click="slideTo(imageIndex)"
+        class="w-14 h-14 border-2 rounded-lg p-1"
         :class="[
           imageIndex == currentSlide ? 'border-amber-500' : 'border-gray-300',
         ]"
+        @click="slideTo(imageIndex)"
       >
         <img :src="slide.src" alt="" />
       </button>

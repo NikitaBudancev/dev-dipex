@@ -12,8 +12,8 @@
           -
         </button>
         <input
-          class="max-w-[30px] h-5 border-0 p-0 appearance-none-input text-center text-sm"
           v-model.number="counter"
+          class="max-w-[30px] h-5 border-0 p-0 appearance-none-input text-center text-sm"
           type="number"
           name="quantity"
           min="1"
@@ -33,5 +33,5 @@
 const counter = ref(1);
 
 const incrementCounter = () => counter.value++;
-const decrementCounter = () => counter.value > 1 ? counter.value-- : 1;
+const decrementCounter = () => (counter.value > 1 ? counter.value-- : 1);
 </script>

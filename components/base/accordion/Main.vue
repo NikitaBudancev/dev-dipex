@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" :id="id" :data-accordion="dataAccordion ?? 'open'">
+  <div :id="id" :class="className" :data-accordion="dataAccordion ?? 'open'">
     <slot />
   </div>
 </template>

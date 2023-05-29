@@ -18,7 +18,11 @@
                 alt=""
               />
             </div>
-            <BaseProductBrandLogo :id="product.id" tooltipText="ABAKUS" imgPath="https://dipex.lv/images/brands/10100001.jpg"/>
+            <BaseProductBrandLogo
+              :id="product.id"
+              tooltip-text="ABAKUS"
+              img-path="https://dipex.lv/images/brands/10100001.jpg"
+            />
           </div>
 
           <div>
@@ -54,7 +58,11 @@
                 data-empty="1"
                 data-fill="4"
               >
-                <BaseProductRating :id="product.id" :rating="4" tooltipText="Высокий класс"/>
+                <BaseProductRating
+                  :id="product.id"
+                  :rating="4"
+                  tooltip-text="Высокий класс"
+                />
                 <BaseProductPrice />
 
                 <div class="flex gap-4 items-center w-full justify-end">
@@ -93,9 +101,9 @@
                     </div>
                   </div>
                   <button
+                    id="favorite-product-14342831"
                     class="p-1.5 border-2 border-amber-500 rounded"
                     data-id="14342831"
-                    id="favorite-product-14342831"
                   >
                     <svg
                       aria-hidden="true"
@@ -204,12 +212,10 @@
         </span>
       </span>
     </div>
-
   </div>
 </template>
 
 <script setup lang="ts">
-
 const { product } = defineProps({
   product: {
     type: Object,

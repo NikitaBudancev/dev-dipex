@@ -10,22 +10,24 @@
     <div class="text-xl mb-3">Заказы в статусе «Принят»</div>
     <div class="flex flex-col gap-5">
       <div
-        class="border border-gray-300 overflow-hidden pb-3 rounded shadow-md"
         v-for="n in 5"
         :key="n"
+        class="border border-gray-200 overflow-hidden pb-4 rounded shadow-md bg-[#f9f9f9]"
       >
         <div class="px-5 py-2 bg-lime-200 font-semibold">
           Заказ №89179 от 04.05.2023, 4 товара на сумму 19.21 €
         </div>
-        <div class="px-5">
-          <div>
+        <div class="flex gap-4 px-4 pt-4">
+          <div
+            class="bg-white rounded-lg flex-1 shadow-sm px-6 py-3 hover:shadow"
+          >
             <div
-              class="flex items-center gap-3 py-2 text-sm font-semibold text-gray-600"
+              class="flex items-center gap-3 py-2 mb-2 text-sm font-semibold text-gray-600"
             >
               <span>ОПЛАТА</span>
               <div class="h-px w-full bg-gray-300"></div>
             </div>
-            <div class="flex gap-32 items-center">
+            <div class="">
               <div>
                 <div class="font-semibold">
                   Счет №89179/1 от 04.05.2023, Bankas karte (internetā)
@@ -36,26 +38,61 @@
                     >Не оплачено</span
                   >
                 </div>
-                <div>Сумма к оплате по счету: <span class="font-semibold">19.21 €</span></div>
+                <div>
+                  Сумма к оплате по счету:
+                  <span class="font-semibold">19.21 €</span>
+                </div>
                 <div class="mt-2">
                   <button
                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Сменить способ оплаты
                   </button>
+
+                  <div class="pt-4 pl-4">
+                    <ul class="flex flex-col gap-3">
+                      <li v-for="n in 2" :key="n">
+                        <input
+                          :id="`small2-${n}`"
+                          type="radio"
+                          name="test"
+                          value=""
+                          class="hidden peer"
+                        />
+                        <label
+                          :for="`small2-${n}`"
+                          class="inline-flex items-center justify-between w-full px-5 py-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                        >
+                          <div class="flex items-center justify-between w-full">
+                            <div class="flex items-center gap-5">
+                              <div class="w-10">
+                                <img
+                                  src="https://dipex.lv/upload/sale/paysystem/logotip/1bd/1bd47c8067b352c6ff7f9a5485449ef6.jpg"
+                                  alt=""
+                                />
+                              </div>
+                              <div>Банковской картой (Онлайн Оплата)</div>
+                            </div>
+                          </div>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="">
+              <div class="mt-5">
                 <button
                   type="button"
-                  class="py-2 px-4 bg-lime-500 text-white font-semibold rounded hover:bg-lime-600"
+                  class="py-2 px-8 bg-lime-500 text-white font-semibold rounded hover:bg-lime-600"
                 >
                   Оплатить
                 </button>
               </div>
             </div>
           </div>
-          <div class="mt-3">
+          <div
+            class="bg-white rounded-lg flex-1 shadow-sm px-6 py-3 hover:shadow"
+          >
             <div
               class="flex items-center gap-3 py-2 text-sm font-semibold text-gray-600"
             >
@@ -94,7 +131,7 @@
             </div>
             <div class="mt-5">
               <button
-                class="font-medium text-gray-600 dark:text-gray-500 hover:underline"
+                class="font-medium text-red-600 dark:text-gray-500 hover:underline"
               >
                 Отменить заказ
               </button>

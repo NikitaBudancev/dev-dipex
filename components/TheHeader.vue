@@ -60,8 +60,8 @@
             >
             <div class="relative w-full">
               <input
-                type="search"
                 id="location-search"
+                type="search"
                 class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-amber-500 focus:border-amber-500 dark:bg-gray-700 dark:border-l-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-amber-500"
                 placeholder="Numurs, Artikuls , OE....."
                 required
@@ -113,7 +113,7 @@
           </button>
         </div>
         <div class="h-6">
-          <BasePopoverMain buttonClass="relative">
+          <BasePopoverMain button-class="relative">
             <template #button>
               <svg
                 aria-hidden="true"
@@ -197,8 +197,8 @@
         <BasePopoverLanguages />
 
         <button
-          class="icon-text text-xs"
           id="avatarButton"
+          class="icon-text text-xs"
           type="button"
           :data-dropdown-toggle="isAuthorized ? 'userDropdown' : ''"
           :data-dropdown-placement="isAuthorized ? 'bottom-start' : ''"
@@ -238,9 +238,9 @@
 
         <!-- Dropdown menu -->
         <div
-          class="z-10 hidden bg-white divide-y divide-gray-100 border border-gray-100 rounded-lg shadow-2xl w-60 dark:bg-gray-700 dark:divide-gray-600"
-          id="userDropdown"
           v-if="isAuthorized"
+          id="userDropdown"
+          class="z-10 hidden bg-white divide-y divide-gray-100 border border-gray-100 rounded-lg shadow-2xl w-60 dark:bg-gray-700 dark:divide-gray-600"
         >
           <div>
             <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
@@ -262,40 +262,40 @@
               <li>
                 <NuxtLink
                   :to="localePath('/personal/orders/')"
-                  @click="closeDropdown"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  @click="closeDropdown"
                   >Текущие заказы</NuxtLink
                 >
               </li>
               <li>
                 <NuxtLink
                   :to="localePath('/personal/private/')"
-                  @click="closeDropdown"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  @click="closeDropdown"
                   >Личные данные</NuxtLink
                 >
               </li>
               <li>
                 <NuxtLink
                   :to="localePath('/personal/orders/')"
-                  @click="closeDropdown"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  @click="closeDropdown"
                   >История заказов</NuxtLink
                 >
               </li>
               <li>
                 <NuxtLink
                   :to="localePath('/personal/cart/')"
-                  @click="closeDropdown"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  @click="closeDropdown"
                   >Корзина</NuxtLink
                 >
               </li>
               <li>
                 <NuxtLink
                   :to="localePath('/about/contacts/')"
-                  @click="closeDropdown"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  @click="closeDropdown"
                   >Контакты</NuxtLink
                 >
               </li>
@@ -303,8 +303,8 @@
             <div class="py-1">
               <a
                 href="#"
-                @click="closeDropdown"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                @click="closeDropdown"
                 >Выйти</a
               >
             </div>
@@ -313,17 +313,17 @@
       </div>
     </div>
   </header>
-  <BaseModalAuth formName="login" />
+  <BaseModalAuth form-name="login" />
 </template>
 
 <script setup>
+import { storeToRefs } from "pinia";
+import { bottom } from "@popperjs/core";
+import { useUserStore } from "~/store/user";
+
 const localePath = useLocalePath();
 
 const config = useRuntimeConfig();
-
-import { useUserStore } from "~/store/user";
-import { storeToRefs } from "pinia";
-import { bottom } from "@popperjs/core";
 
 const store = useUserStore();
 const { isAuthorized } = storeToRefs(store);

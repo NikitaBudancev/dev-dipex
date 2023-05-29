@@ -5,11 +5,11 @@
         <li class="text-center">
           <button
             class="icon-text text-xl font-bold"
-            v-on:click="toggleTabs(1)"
-            v-bind:class="{
+            :class="{
               '': openTab !== 1,
               'text-orange-400 border-b-3 border-orange-400': openTab === 1,
             }"
+            @click="toggleTabs(1)"
           >
             <img
               class="w-10"
@@ -22,11 +22,11 @@
         <li class="text-center">
           <button
             class="icon-text text-xl font-bold"
-            v-on:click="toggleTabs(2)"
-            v-bind:class="{
+            :class="{
               '': openTab !== 2,
               'text-orange-400 border-b-3 border-orange-400': openTab === 2,
             }"
+            @click="toggleTabs(2)"
           >
             <img
               class="w-10"
@@ -54,8 +54,8 @@
 </template>
 
 <script>
-import TabAuto from '~/components/base/tabs/tab/Auto.vue';
-import TabMoto from '~/components/base/tabs/tab/Moto.vue';
+import TabAuto from "~/components/base/tabs/tab/Auto.vue";
+import TabMoto from "~/components/base/tabs/tab/Moto.vue";
 
 export default {
   components: {

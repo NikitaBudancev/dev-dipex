@@ -12,8 +12,8 @@
           <slot name="button" />
         </button>
         <div
-          class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-2xl dark:bg-gray-700"
           :id="popoverId"
+          class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-2xl dark:bg-gray-700"
         >
           <slot />
         </div>

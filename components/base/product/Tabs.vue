@@ -3,7 +3,7 @@
     class="mt-5 mb-6 rounded-md shadow-md text-sm font-medium text-center text-gray-500 bg-white"
   >
     <ul class="flex flex-wrap -mb-px ml-2">
-      <li class="mr-2" v-for="(tab, tabIndex) in tabs" :key="tabIndex">
+      <li v-for="(tab, tabIndex) in tabs" :key="tabIndex" class="mr-2">
         <button
           :class="[
             tabIndex == activeTab
@@ -18,27 +18,26 @@
     </ul>
   </div>
   <div class="tab-content rounded-md">
-      <div :class="{ hidden: activeTab !== 0, block: activeTab === 0 }">
-        <div class="flex gap-5">
-          <div class="w-3/12">
-            <BaseProductFilter />
-          </div>
-          <div class="w-9/12">
-            <BaseProductList :data="data"/>
-          </div>
+    <div :class="{ hidden: activeTab !== 0, block: activeTab === 0 }">
+      <div class="flex gap-5">
+        <div class="w-3/12">
+          <BaseProductFilter />
+        </div>
+        <div class="w-9/12">
+          <BaseProductList :data="data" />
         </div>
       </div>
-      <div :class="{ hidden: activeTab !== 1, block: activeTab === 1 }">
-test 1 
-      </div>
-      <div :class="{ hidden: activeTab !== 2, block: activeTab === 3 }">
-test3
-      </div>
+    </div>
+    <div :class="{ hidden: activeTab !== 1, block: activeTab === 1 }">
+      test 1
+    </div>
+    <div :class="{ hidden: activeTab !== 2, block: activeTab === 3 }">
+      test3
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
 const { pending, data } = await useProducts();
 
 const tabs = ref(["ЗАМЕНИТЕЛИ", "OEM НОМЕРА", "ПРИМЕНЯЕТСЯ К МОДЕЛИ"]);

@@ -10,20 +10,20 @@
       </div>
       <div class="flex items-center gap-1 text-xl" data-test="">
         <button
-          class="bg-gray-300 w-7 h-7 leading-7  text-center"
+          class="bg-gray-300 w-7 h-7 leading-7 text-center"
           @click="decrementCounter"
         >
           -
         </button>
         <input
-          class="max-w-[30px] h-5 border-0 p-0 appearance-none-input text-center"
           v-model.number="counter"
+          class="max-w-[30px] h-5 border-0 p-0 appearance-none-input text-center"
           type="number"
           name="quantity"
           min="1"
         />
         <button
-          class="bg-gray-300 w-7 h-7 leading-7  text-center"
+          class="bg-gray-300 w-7 h-7 leading-7 text-center"
           @click="incrementCounter"
         >
           +

@@ -477,12 +477,9 @@ export const useCatalogStore = defineStore("catalogStore", () => {
 
   // const slugs = route.params.slug.filter((item) => item != "");
 
-
   // console.log(slugs)
 
   // const arRoutes = route.fi
-
-
 
   const fetchProduct = async () => {
     const { pending, data } = await useLazyFetch(
@@ -492,16 +489,15 @@ export const useCatalogStore = defineStore("catalogStore", () => {
       }
     );
 
-    const test = await data.value
+    const test = await data.value;
 
-    console.log()
+    console.log();
 
     if (data.value) {
       products.value = data.value.products;
       pagination.value = data.value.pagination;
 
       // console.log(products.value)
-
     } else {
       console.log("empty");
     }
@@ -525,14 +521,12 @@ export const useCatalogStore = defineStore("catalogStore", () => {
   // const categoriesBySlug = async () => {
   //   await fetchCategories();
 
-   
   //   let firstSlug = slugs[0];
 
   //   let shiftedSlugs = slugs.shift();
 
   //   let mainCategory = categories.value.find(category => category.code === firstSlug);
   //   let mainCategoryChilds = mainCategory.childs;
-
 
   //   // console.log(mainCategoryChilds)
 
@@ -541,7 +535,7 @@ export const useCatalogStore = defineStore("catalogStore", () => {
   //   //       console.log(child)
   //   //   });
   //   // }
-  
+
   // };
 
   // categoriesBySlug();

@@ -4,7 +4,7 @@
       <BaseProductFilter />
     </div>
     <div class="w-9/12">
-      <div class="flex flex-col gap-4" v-if="pending">
+      <div v-if="pending" class="flex flex-col gap-4">
         <BaseProductPreview v-for="n in 20" :key="n" />
       </div>
       <BaseProductList v-else :data="data" />

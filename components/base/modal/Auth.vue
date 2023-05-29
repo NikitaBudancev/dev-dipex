@@ -30,16 +30,16 @@
         </button>
         <ClientOnly>
           <BaseFormLogin
-            @change-form="changeForm"
             v-if="formName === 'login'"
+            @change-form="changeForm"
           />
           <BaseFormRegister
-            @change-form="changeForm"
             v-if="formName === 'register'"
+            @change-form="changeForm"
           />
           <BaseFormForgot
-            @change-form="changeForm"
             v-if="formName === 'forgot'"
+            @change-form="changeForm"
           />
         </ClientOnly>
       </div>

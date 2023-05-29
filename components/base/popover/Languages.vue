@@ -1,6 +1,6 @@
 <template>
   <BasePopoverMain
-    buttonClass="inline-flex items-center gap-2 font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer"
+    button-class="inline-flex items-center gap-2 font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer"
   >
     <template #button>
       <img

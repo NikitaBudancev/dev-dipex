@@ -1,6 +1,7 @@
 <template>
   <div
-    class="flex flex-col justify-between bg-white p-3 pb-0 rounded-md shadow-md h-[218px] animate-pulse" >
+    class="flex flex-col justify-between bg-white p-3 pb-0 rounded-md shadow-md h-[218px] animate-pulse"
+  >
     <div class="flex gap-3 mb-3">
       <div class="w-3/12">
         <span class="relative"

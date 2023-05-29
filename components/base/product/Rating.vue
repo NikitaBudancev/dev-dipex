@@ -1,9 +1,8 @@
 <template>
-  <BaseTooltipMain :tooltip="{ id: props.id, text: props.tooltipText, tooltipId }">
-    <Rating
-      :rating="props.rating"
-      :data-tooltip-target="tooltipId"
-    />
+  <BaseTooltipMain
+    :tooltip="{ id: props.id, text: props.tooltipText, tooltipId }"
+  >
+    <Rating :rating="props.rating" :data-tooltip-target="tooltipId" />
   </BaseTooltipMain>
 </template>
 
@@ -25,9 +24,7 @@ const props = defineProps({
     required: true,
     type: String,
   },
-
 });
 
 const tooltipId = `tooltip-rating-${props.id}`;
-
 </script>

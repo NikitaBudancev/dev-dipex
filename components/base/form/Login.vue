@@ -3,7 +3,7 @@
     <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">
       Авторизация
     </h3>
-    <form class="space-y-6" @submit.prevent="submitForm" action="#">
+    <form class="space-y-6" action="#" @submit.prevent="submitForm">
       <div>
         <label
           for="email"
@@ -11,32 +11,32 @@
           >E-mail</label
         >
         <input
+          id="email"
           v-model="formData.email"
-          @change="v$.email.$touch"
           type="email"
           name="email"
-          id="email"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
           :class="{
             'border-red-500 border-2': v$.email.$error,
           }"
           placeholder="name@company.com"
+          @change="v$.email.$touch"
         />
       </div>
       <div>
         <label
           for="password"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >{{t('title')}}</label
+          >{{ t("title") }}</label
         >
         <input
+          id="password"
           v-model="formData.password"
-          @change="v$.password.$touch"
           type="password"
           name="password"
-          id="password"
           placeholder="••••••••"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+          @change="v$.password.$touch"
         />
       </div>
       <div class="flex justify-between">
@@ -68,8 +68,8 @@
       >
         <button
           class="text-blue-700 hover:underline dark:text-blue-500"
-          @click="$emit('changeForm', 'register')"
           type="button"
+          @click="$emit('changeForm', 'register')"
         >
           Регистрация
         </button>
@@ -79,8 +79,8 @@
       >
         <button
           class="text-blue-700 hover:underline dark:text-blue-500"
-          @click="$emit('changeForm', 'forgot')"
           type="button"
+          @click="$emit('changeForm', 'forgot')"
         >
           Забыли свой пароль?
         </button>
@@ -90,8 +90,6 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useLang();
-
 import { useVuelidate } from "@vuelidate/core";
 import {
   required,
@@ -100,6 +98,8 @@ import {
   minLength,
   helpers,
 } from "@vuelidate/validators";
+
+const { t } = useLang();
 
 const formData = reactive({
   email: { required, email },

@@ -3,8 +3,8 @@
     :items-to-show="1"
     :autoplay="5000"
     :transition="600"
-    :wrapAround="1"
-    :pauseAutoplayOnHover="1"
+    :wrap-around="1"
+    :pause-autoplay-on-hover="1"
   >
     <slide v-for="slide in slides" :key="slide.id">
       <img :src="slide.imgUrl" :alt="slide.title" :title="slide.title" />
@@ -14,8 +14,8 @@
 
 <script>
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide } from 'vue3-carousel';
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide } from "vue3-carousel";
 
 export default {
   components: {
