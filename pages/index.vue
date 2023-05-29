@@ -1,5 +1,4 @@
 <template>
-
   <section>
     <div class="flex justify-between items-start gap-8">
       <div class="w-3/12">

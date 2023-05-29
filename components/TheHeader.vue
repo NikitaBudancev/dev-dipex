@@ -319,12 +319,11 @@
 <script setup>
 const localePath = useLocalePath();
 
-const config = useRuntimeConfig()
-
-console.log(config)
+const config = useRuntimeConfig();
 
 import { useUserStore } from "~/store/user";
 import { storeToRefs } from "pinia";
+import { bottom } from "@popperjs/core";
 
 const store = useUserStore();
 const { isAuthorized } = storeToRefs(store);
@@ -335,4 +334,13 @@ const profileName = computed(() =>
 
 const closeDropdown = ref(() => {});
 
+onMounted(() => {
+  const $triggerEl = document.getElementById("avatarButton");
+
+  if ($triggerEl) {
+    closeDropdown.value = () => {
+      $triggerEl.click();
+    };
+  }
+});
 </script>
