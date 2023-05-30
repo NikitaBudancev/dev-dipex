@@ -14,4 +14,6 @@
 
 <script setup lang="ts">
 const { pending, data } = await useProducts();
+
+console.log(data);
 </script>

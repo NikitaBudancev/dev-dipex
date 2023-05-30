@@ -318,12 +318,9 @@
 
 <script setup>
 import { storeToRefs } from "pinia";
-import { bottom } from "@popperjs/core";
 import { useUserStore } from "~/store/user";
 
 const localePath = useLocalePath();
-
-const config = useRuntimeConfig();
 
 const store = useUserStore();
 const { isAuthorized } = storeToRefs(store);

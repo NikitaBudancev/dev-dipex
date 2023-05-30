@@ -53,8 +53,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["item"],
-};
+<script setup lang="ts">
+const localePath = useLocalePath();
+
+const props = defineProps({
+  item: {
+    type: Object,
+    required: true,
+  },
+});
+
+const { item } = toRefs(props);
 </script>

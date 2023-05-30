@@ -11,6 +11,14 @@
   .btn-small {
     @apply flex py-2 px-6 rounded-md font-semibold;
   }
+
+  .icon-text {
+    @apply flex gap-2 items-center;
+  }
+
+  .sup-icon {
+    @apply flex justify-center items-center absolute -top-2 left-1/2 bg-amber-500 w-5 h-5 rounded-full text-white;
+  }
 }
 
 body {
@@ -43,14 +51,6 @@ button {
 
 .content {
   @apply container-main pt-3 pb-8 bg-[#F5F5F5] min-h-screen;
-}
-
-.icon-text {
-  @apply flex gap-2 items-center;
-}
-
-.sup-icon {
-  @apply flex justify-center items-center absolute -top-2 left-1/2 bg-amber-500 w-5 h-5 rounded-full text-white;
 }
 
 .accordion__item {

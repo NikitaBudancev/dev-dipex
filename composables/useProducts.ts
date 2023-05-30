@@ -15,8 +15,6 @@ export const useProducts = async () => {
       // },
     });
 
-    console.log(data);
-
     return {
       pending,
       data,

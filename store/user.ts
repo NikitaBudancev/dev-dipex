@@ -1,9 +1,7 @@
 import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("userStore", () => {
-  const MyBool = ref<boolean>();
-
-  const isAuthorized = ref(true);
+  const isAuthorized = ref<boolean>(true);
 
   return { isAuthorized };
 });

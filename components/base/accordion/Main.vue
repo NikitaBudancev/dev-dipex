@@ -1,5 +1,9 @@
 <template>
-  <div :id="id" :class="className" :data-accordion="dataAccordion ?? 'open'">
+  <div
+    :id="id"
+    :class="props.className"
+    :data-accordion="props.dataAccordion ?? 'open'"
+  >
     <slot />
   </div>
 </template>
@@ -11,7 +15,7 @@ onMounted(() => {
   initAccordions();
 });
 
-const { id, dataAccordion, className } = defineProps({
+const props = defineProps({
   id: {
     type: String,
     required: true,
@@ -19,10 +23,12 @@ const { id, dataAccordion, className } = defineProps({
 
   dataAccordion: {
     type: String,
+    default: "",
   },
 
   className: {
     type: String,
+    default: "",
   },
 });
 </script>

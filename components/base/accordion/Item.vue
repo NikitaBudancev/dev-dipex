@@ -2,7 +2,7 @@
   <div class="accordion__item">
     <div :id="`accordion-open-heading-${accordionId}`">
       <button
-        :class="classButton ?? 'accordion__button'"
+        :class="props.classButton ?? 'accordion__button'"
         :data-accordion-target="`#accordion-open-body-${accordionId}`"
         :aria-controls="`accordion-open-body-${accordionId}`"
         aria-expanded="true"
@@ -31,7 +31,7 @@
       class=""
       :aria-labelledby="`accordion-open-heading-${accordionId}`"
     >
-      <div :class="classContent ?? 'accordion__content'">
+      <div :class="props.classContent ?? 'accordion__content'">
         <slot />
       </div>
     </div>
@@ -41,12 +41,14 @@
 <script setup lang="ts">
 const accordionId = `${Math.random().toString(36).slice(2)}`;
 
-const { classButton, classContent } = defineProps({
+const props = defineProps({
   classButton: {
     type: String,
+    default: "",
   },
   classContent: {
     type: String,
+    default: "",
   },
 });
 </script>

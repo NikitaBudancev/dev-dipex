@@ -71,6 +71,4 @@
   </h1>
 </template>
 
-<script setup lang="ts">
-import { Breadcrumb, BreadcrumbItem } from "flowbite-vue";
-</script>
+<script setup lang="ts"></script>
