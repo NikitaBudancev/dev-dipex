@@ -1,13 +1,16 @@
 <template>
-  <NuxtLoadingIndicator color="orange" />
-  <div class="page">
-    <TheHeader />
-    <div class="content">
-      <TheTopMenu />
-      <TheBreadcrumb v-if="$route.path !== '/'" />
-      <slot />
+  <div>
+    <NuxtLoadingIndicator color="orange" />
+    <div class="page">
+      <TheHeader />
+      <main class="content">
+        <TheTopMenu />
+        <TheBreadcrumb v-if="$route.path !== '/'" />
+        {{ firstName }}
+        <slot />
+      </main>
+      <TheFooter />
     </div>
-    <TheFooter />
   </div>
 </template>
 

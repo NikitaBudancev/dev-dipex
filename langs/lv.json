@@ -1,3 +1,16 @@
 {
-  "title": "hello"
+  "form": {
+    "lk": "Personīgā informācija"
+  },
+  "title": "hello",
+  "button": {
+    "primary": "Отправить",
+    "saveProfile": "Saglabāt profilu"
+  },
+  "firstName": "Vārds",
+  "lastName": "Uzvārds",
+  "secondName": "Otrais vārds",
+  "password": "Parole",
+  "passwordNew": "Jauna parole",
+  "passwordConfirm": "Apstipriniet paroli"
 }

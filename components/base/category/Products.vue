@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-const { pending, data } = await useProducts();
+const route = useRoute();
 
-console.log(data);
+const { pending, data } = await useProducts(route.fullPath);
 </script>

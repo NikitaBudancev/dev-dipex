@@ -1,9 +1,6 @@
 import { defineStore } from "pinia";
 
 export const useCatalogStore = defineStore("catalogStore", () => {
-  const products = ref([]);
-  const pagination = ref([]);
-
   const categories = ref([
     {
       id: 1,
@@ -470,28 +467,29 @@ export const useCatalogStore = defineStore("catalogStore", () => {
       ],
     },
   ]);
+  const dataProducts = ref();
+  const pendingProducts = ref();
 
-  const fetchProduct = async () => {
-    const { pending, data } = await useLazyFetch(
-      "https://api.dipex.lv/api/rest/v1/products/get/",
-      {
-        method: "GET",
+  const fetchProducts = async () => {
+    const config = useRuntimeConfig();
+
+    try {
+      const baseURL = `${config.public.apiBase}/products/get/`;
+      const defaultProducts = () => [];
+
+      const { pending, data }: any = await useLazyFetch(baseURL, {
+        default: defaultProducts,
+      });
+
+      if (data.value) {
+        pendingProducts.value = pending.value;
+        dataProducts.value = data.value;
+        console.log("test");
       }
-    );
-
-    const test = await data.value;
-
-    console.log();
-
-    if (data.value) {
-      products.value = data.value.products;
-      pagination.value = data.value.pagination;
-
-      // console.log(products.value)
-    } else {
-      console.log("empty");
+    } catch (error) {
+      console.error(error);
     }
   };
 
-  return { categories, fetchProduct, products, pagination };
+  return { categories, fetchProducts, dataProducts, pendingProducts };
 });

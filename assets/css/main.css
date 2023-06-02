@@ -5,11 +5,15 @@
 
 @layer base {
   .btn {
-    @apply flex py-5 px-14 text-center text-white bg-amber-500 font-bold rounded-lg hover:bg-amber-500/90 border-0;
+    @apply flex py-5 px-14 justify-center text-white bg-amber-500 font-bold rounded-lg hover:bg-amber-500/90 border-0 disabled:bg-amber-500/60 invalid:bg-red-500;
   }
 
   .btn-small {
     @apply flex py-2 px-6 rounded-md font-semibold;
+  }
+
+  .btn-lime {
+    @apply bg-lime-500 hover:bg-lime-600;
   }
 
   .icon-text {

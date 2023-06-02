@@ -3,92 +3,100 @@
     <form
       class="space-y-4 md:space-y-6 max-w-[400px] m-auto flex justify-center flex-col"
       action="#"
+      @submit.prevent="formSubmit"
     >
       <div
         class="text-xl font-semibold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
       >
-        Личные данные
+        {{ t("form.lk") }}
       </div>
-      <div>
-        <label
-          for="name"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Имя</label
-        >
-        <input
-          id="name"
-          type="text"
-          name="name"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
-      </div>
-      <div>
-        <label
-          for="last_name"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Фамилия</label
-        >
-        <input
-          id="last_name"
-          type="text"
-          name="last_name"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
-      </div>
-      <div>
-        <label
-          for="second_name"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Отчество</label
-        >
-        <input
-          id="second_name"
-          type="text"
-          name="second_name"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
-      </div>
+      <BaseInputMain
+        v-model="formData.firstName"
+        name="firstName"
+        :label="t('firstName')"
+        :errors="v$.firstName.$errors"
+      />
+      <BaseInputMain
+        v-model="formData.lastName"
+        name="lastName"
+        :label="t('lastName')"
+        :errors="v$.lastName.$errors"
+      />
+      <BaseInputMain
+        v-model="formData.secondName"
+        name="secondName"
+        :label="t('secondName')"
+        :errors="v$.secondName.$errors"
+      />
       <div
         class="text-xl font-semibold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
       >
-        Пароль
+        {{ t("password") }}
       </div>
-      <div>
-        <label
-          for="password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >Новый пароль</label
-        >
-        <input
-          id="password"
-          type="password"
-          name="password"
-          placeholder="••••••••"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
-      </div>
-      <div>
-        <label
-          for="confirm-password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Подтверждение пароля</label
-        >
-        <input
-          id="confirm-password"
-          type="confirm-password"
-          name="confirm-password"
-          placeholder="••••••••"
-          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
-      </div>
-
-      <button
-        type="button"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-      >
-        Сохранить настройки профиля
-      </button>
+      <BaseInputMain
+        v-model="formData.password"
+        name="password"
+        :label="t('passwordNew')"
+        :errors="v$.password.$errors"
+      />
+      <BaseInputMain
+        v-model="formData.passwordConfirm"
+        name="passwordConfirm"
+        :label="t('passwordConfirm')"
+        :errors="v$.passwordConfirm.$errors"
+      />
+      <BaseButtonMain class="btn py-3" :name="t('button.saveProfile')" />
     </form>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useVuelidate } from "@vuelidate/core";
+import { required, sameAs, minLength, helpers } from "@vuelidate/validators";
+
+const { t } = useLang();
+
+const formData = reactive({
+  firstName: "",
+  lastName: "",
+  secondName: "",
+  password: "",
+  passwordConfirm: "",
+});
+
+const rules = computed(() => {
+  return {
+    firstName: {
+      required: helpers.withMessage(t("error.required"), required),
+    },
+    lastName: {
+      required: helpers.withMessage(t("error.required"), required),
+    },
+    secondName: {
+      required: helpers.withMessage(t("error.required"), required),
+    },
+    password: {
+      required: helpers.withMessage(t("error.required"), required),
+      minLength: helpers.withMessage(
+        ({ $params }) => t("error.minLength").replace("minLength", $params.min),
+        minLength(6)
+      ),
+    },
+    passwordConfirm: {
+      confirmPassword: helpers.withMessage(
+        t("error.passwordConfirm"),
+        sameAs(formData.password)
+      ),
+    },
+  };
+});
+
+const v$ = useVuelidate(rules, formData);
+
+const formSubmit = (event) => {
+  v$.value.$validate();
+  if (!v$.value.$error) {
+    //    Some code
+  }
+};
+</script>

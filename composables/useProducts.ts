@@ -1,4 +1,4 @@
-export const useProducts = async () => {
+export const useProducts = async (urlPath: string) => {
   const config = useRuntimeConfig();
 
   try {
@@ -9,9 +9,7 @@ export const useProducts = async () => {
       default: defaultProducts,
       // method: "POST",
       // body: {
-      //   category_id: 100380,
-      //   language: "ru",
-      //   site: "s1",
+      //   path: urlPath,
       // },
     });
 

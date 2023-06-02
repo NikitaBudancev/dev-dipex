@@ -1,3 +1,22 @@
 {
-  "title": "hello"
+  "form": {
+    "lk": "Личные данные"
+  },
+  "button": {
+    "primary": "Отправить",
+    "saveProfile": "Сохранить настройки профиля"
+  },
+
+  "firstName": "Имя",
+  "lastName": "Фамилия",
+  "secondName": "Отчество",
+  "password": "Пароль",
+  "passwordNew": "Новый пароль",
+  "passwordConfirm": "Подтверждение пароля",
+
+  "error": {
+    "required": "Поле обязательное для заполнения",
+    "passwordConfirm": "Пароли не совпадают",
+    "minLength": "Минимальная длина поля minLength"
+  }
 }
