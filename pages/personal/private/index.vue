@@ -1,5 +1,5 @@
 <template>
-  <BaseFormPrivate />
+  <FormPrivate />
 </template>
 
 <script setup lang="ts">

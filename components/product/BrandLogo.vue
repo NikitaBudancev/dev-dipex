@@ -1,23 +1,23 @@
 <template>
-  <BaseTooltipMain
+  <TooltipMain
     :tooltip="{ id: props.id, text: props.tooltipText, tooltipId }"
   >
-    <Rating :rating="props.rating" :data-tooltip-target="tooltipId" />
-  </BaseTooltipMain>
+    <button :data-tooltip-target="tooltipId" type="button">
+      <img class="h-7" :src="props.imgPath" />
+    </button>
+ </TooltipMain>
 </template>
 
 <script setup lang="ts">
-import { Rating } from "flowbite-vue";
-
 const props = defineProps({
   id: {
     required: true,
     type: Number,
   },
 
-  rating: {
+  imgPath: {
+    type: String,
     required: true,
-    type: Number,
   },
 
   tooltipText: {
@@ -26,5 +26,5 @@ const props = defineProps({
   },
 });
 
-const tooltipId = `tooltip-rating-${props.id}`;
+const tooltipId = `tooltip-brand-${props.id}`;
 </script>

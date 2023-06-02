@@ -1,22 +1,26 @@
 {
   "form": {
-    "lk": "Личные данные"
+    "lk": "Личные данные",
+    "forgotPassword": "Сменить пароль",
+    "forgotText": "Если вы забыли пароль, введите E-Mail. Новый пароль будет выслан вам по E-Mail."
   },
   "button": {
     "primary": "Отправить",
     "saveProfile": "Сохранить настройки профиля"
   },
 
-  "firstName": "Имя",
-  "lastName": "Фамилия",
-  "secondName": "Отчество",
-  "password": "Пароль",
-  "passwordNew": "Новый пароль",
-  "passwordConfirm": "Подтверждение пароля",
-
   "error": {
     "required": "Поле обязательное для заполнения",
     "passwordConfirm": "Пароли не совпадают",
-    "minLength": "Минимальная длина поля minLength"
-  }
+    "minLength": "Минимальная длина поля minLength",
+    "email": "Адрес электронной почты должен содержать симовы {'@'} ."
+  },
+
+  "firstName": "Имя",
+  "lastName": "Фамилия",
+  "secondName": "Отчество",
+  "email": "E-mail",
+  "password": "Пароль",
+  "passwordNew": "Новый пароль",
+  "passwordConfirm": "Подтверждение пароля"
 }

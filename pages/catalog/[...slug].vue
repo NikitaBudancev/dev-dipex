@@ -1,8 +1,8 @@
 <template>
   <section>
-    <BaseCategoryList v-if="isCategory == 'category'" />
-    <BaseCategoryProducts v-else-if="isCategory == 'products'" />
-    <BaseProductDetail v-else />
+    <CategoryList v-if="isCategory == 'category'" />
+    <CategoryProducts v-else-if="isCategory == 'products'" />
+    <ProductDetail v-else />
   </section>
 </template>
 

@@ -113,7 +113,7 @@
           </button>
         </div>
         <div class="h-6">
-          <BasePopoverMain button-class="relative">
+          <PopoverMain button-class="relative">
             <template #button>
               <svg
                 aria-hidden="true"
@@ -170,7 +170,7 @@
               </button>
               для использования гаража
             </div>
-          </BasePopoverMain>
+          </PopoverMain>
         </div>
         <a href="/ru/personal/cart/" class="relative">
           <svg
@@ -194,7 +194,7 @@
           <span class="sup-icon">0</span>
         </a>
 
-        <BasePopoverLanguages />
+        <PopoverLanguages />
 
         <button
           id="avatarButton"
@@ -313,7 +313,7 @@
       </div>
     </div>
   </header>
-  <BaseModalAuth form-name="login" />
+  <ModalAuth form-name="login" />
 </template>
 
 <script setup>

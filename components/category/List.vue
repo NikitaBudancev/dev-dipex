@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-3 gap-6">
-    <BaseCategoryCard
+    <CategoryCard
       v-for="category in categories"
       :key="category.id"
       :item="category"

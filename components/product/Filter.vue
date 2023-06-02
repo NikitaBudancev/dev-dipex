@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <BaseFilterCarSelect />
+    <FilterCarSelect />
 
     <form
       class="pt-8 pb-8 px-5 bg-white rounded-xl shadow-md mt-4"
@@ -11,11 +11,11 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="filter__body">
-            <BaseAccordionMain
+            <AccordionMain
               id="accordion-filter"
               class-name="flex flex-col gap-5"
             >
-              <BaseAccordionItem
+              <AccordionItem
                 class-button="accordion__button rounded-t-lg"
                 class-content="accordion__content rounded-b-lg"
               >
@@ -73,16 +73,16 @@
                     </ul>
                   </div>
                 </template>
-                <BaseProductFilterCategory />
-              </BaseAccordionItem>
-              <BaseAccordionItem
+                <ProductFilterCategory />
+             </AccordionItem>
+              <AccordionItem
                 class-button="accordion__button rounded-t-lg"
                 class-content="accordion__content  rounded-b-lg max-h-[300px] overflow-x-auto scroll-grey mr-1 px-4 py-3"
               >
                 <template #head>Бренд</template>
-                <BaseProductFilterBrand />
-              </BaseAccordionItem>
-            </BaseAccordionMain>
+                <ProductFilterBrand />
+             </AccordionItem>
+           </AccordionMain>
           </div>
         </div>
       </div>

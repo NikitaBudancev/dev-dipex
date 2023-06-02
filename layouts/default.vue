@@ -2,6 +2,7 @@
   <div>
     <NuxtLoadingIndicator color="orange" />
     <div class="page">
+      <InputCheck text="Запомнить меня" name="first" />
       <TheHeader />
       <main class="content">
         <TheTopMenu />

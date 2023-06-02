@@ -3,10 +3,10 @@
     <section>
       <div class="flex justify-between items-start gap-8">
         <div class="w-3/12">
-          <BaseFilterCarSelect />
+          <FilterCarSelect />
         </div>
         <div class="w-9/12 bg-white rounded-xl p-2 shadow">
-          <BaseCarouselMain :slides="slides" />
+          <CarouselMain :slides="slides" />
         </div>
       </div>
     </section>
@@ -134,13 +134,13 @@
       </div>
     </section>
     <section>
-      <BaseCategoryList :categories="categories" />
+      <CategoryList :categories="categories" />
       <div class="flex justify-center mt-8">
         <a class="btn" href="/catalog/rezerves-dalas/">Больше разделов</a>
       </div>
     </section>
     <section>
-      <BaseTabsMain />
+      <TabsMain />
     </section>
   </div>
 </template>

@@ -387,7 +387,7 @@
 
       <div class="p-4 pt-[5rem] bg-[#F5F5F5] flex-1">
         <TheTopMenu />
-        <BaseBredcrumbsDefault v-if="$route.path !== '/'" />
+        <BredcrumbsDefault v-if="$route.path !== '/'" />
         <slot />
       </div>
     </div>
@@ -403,7 +403,7 @@
   </button>
   <Modal v-if="isShowModal" :size="size" size="xs" @close="closeModal">
     <template #body>
-      <BaseFormLogin />
+      <FormLogin />
     </template>
     <template #footer>
       <div class="flex justify-between">

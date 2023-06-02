@@ -29,15 +29,15 @@
           <span class="sr-only">Close modal</span>
         </button>
         <ClientOnly>
-          <BaseFormLogin
+          <FormLogin
             v-if="formName === 'login'"
             @change-form="changeForm"
           />
-          <BaseFormRegister
+          <FormRegister
             v-if="formName === 'register'"
             @change-form="changeForm"
           />
-          <BaseFormForgot
+          <FormForgot
             v-if="formName === 'forgot'"
             @change-form="changeForm"
           />

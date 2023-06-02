@@ -2,7 +2,6 @@
   <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
     <form
       class="space-y-4 md:space-y-6 max-w-[400px] m-auto flex justify-center flex-col"
-      action="#"
       @submit.prevent="formSubmit"
     >
       <div
@@ -10,19 +9,19 @@
       >
         {{ t("form.lk") }}
       </div>
-      <BaseInputMain
+      <InputMain
         v-model="formData.firstName"
         name="firstName"
         :label="t('firstName')"
         :errors="v$.firstName.$errors"
       />
-      <BaseInputMain
+      <InputMain
         v-model="formData.lastName"
         name="lastName"
         :label="t('lastName')"
         :errors="v$.lastName.$errors"
       />
-      <BaseInputMain
+      <InputMain
         v-model="formData.secondName"
         name="secondName"
         :label="t('secondName')"
@@ -33,19 +32,19 @@
       >
         {{ t("password") }}
       </div>
-      <BaseInputMain
+      <InputMain
         v-model="formData.password"
         name="password"
         :label="t('passwordNew')"
         :errors="v$.password.$errors"
       />
-      <BaseInputMain
+      <InputMain
         v-model="formData.passwordConfirm"
         name="passwordConfirm"
         :label="t('passwordConfirm')"
         :errors="v$.passwordConfirm.$errors"
       />
-      <BaseButtonMain class="btn py-3" :name="t('button.saveProfile')" />
+      <ButtonMain class="btn py-3" :name="t('button.saveProfile')" />
     </form>
   </div>
 </template>

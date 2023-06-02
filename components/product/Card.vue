@@ -18,7 +18,7 @@
                 alt=""
               />
             </div>
-            <BaseProductBrandLogo
+            <ProductBrandLogo
               :id="product.id"
               tooltip-text="ABAKUS"
               img-path="https://dipex.lv/images/brands/10100001.jpg"
@@ -50,7 +50,7 @@
                   </NuxtLink>
                 </div>
               </div>
-              <BaseProductCardProperty :properties="properties" />
+              <ProductCardProperty :properties="properties" />
             </div>
             <div class="w-5/12">
               <div
@@ -58,15 +58,15 @@
                 data-empty="1"
                 data-fill="4"
               >
-                <BaseProductRating
+                <ProductRating
                   :id="product.id"
                   :rating="4"
                   tooltip-text="Высокий класс"
                 />
-                <BaseProductPrice />
+                <ProductPrice />
 
                 <div class="flex gap-4 items-center w-full justify-end">
-                  <BaseProductCount />
+                  <ProductCount />
                   <div
                     class="product-item-info-container product-item-info-container_buy-btn"
                     data-entity="buttons-block"

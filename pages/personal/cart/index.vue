@@ -65,7 +65,7 @@
             >
           </div>
           <div>
-            <BaseCounterBasket />
+            <CounterBasket />
           </div>
         </div>
       </div>

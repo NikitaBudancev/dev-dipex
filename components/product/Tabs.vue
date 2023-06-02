@@ -21,10 +21,10 @@
     <div :class="{ hidden: activeTab !== 0, block: activeTab === 0 }">
       <div class="flex gap-5">
         <div class="w-3/12">
-          <BaseProductFilter />
+          <ProductFilter />
         </div>
         <div class="w-9/12">
-          <BaseProductList :data="data" />
+          <ProductList :data="data" />
         </div>
       </div>
     </div>

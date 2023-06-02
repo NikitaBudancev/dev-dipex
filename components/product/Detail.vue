@@ -1,7 +1,7 @@
 <template>
   <div class="flex gap-5 bg-white rounded-md shadow-md p-5">
     <div class="max-w-[35%]">
-      <BaseCarouselProduct />
+      <CarouselProduct />
     </div>
     <div class="flex-1">
       <div class="text-2xl mb-5">Тормозной диск BLUE PRINT ADM54385</div>
@@ -162,12 +162,12 @@
     </div>
     <div class="flex-1 max-w-[300px]">
       <div class="flex justify-between items-center mb-3">
-        <BaseProductBrandLogo
+        <ProductBrandLogo
           :id="1"
           tooltip-text="ABAKUS"
           img-path="https://dipex.lv/images/brands/10100001.jpg"
         />
-        <BaseProductRating :id="2" tooltip-text="Bысокий класс" :rating="3" />
+        <ProductRating :id="2" tooltip-text="Bысокий класс" :rating="3" />
       </div>
       <div class="icon-text mb-1">
         <svg
@@ -214,8 +214,8 @@
       <div
         class="flex flex-col items-center gap-5 mt-4 p-5 border-2 border-gray-200 rounded-md"
       >
-        <BaseProductPrice />
-        <BaseProductCount />
+        <ProductPrice />
+        <ProductCount />
         <div>
           <button
             class="icon-text btn btn-small"
@@ -247,7 +247,7 @@
     </div>
   </div>
   <div>
-    <BaseProductTabs />
+    <ProductTabs />
   </div>
 </template>
 

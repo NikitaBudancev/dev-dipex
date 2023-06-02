@@ -41,10 +41,10 @@
         <div class="px-4 py-5 flex-auto">
           <div class="tab-content tab-space">
             <div :class="{ hidden: openTab !== 1, block: openTab === 1 }">
-              <TabAuto />
+              <TabsTabAuto />
             </div>
             <div :class="{ hidden: openTab !== 2, block: openTab === 2 }">
-              <TabMoto />
+              <TabsTabMoto />
             </div>
           </div>
         </div>
@@ -54,15 +54,7 @@
 </template>
 
 <script>
-import TabAuto from "~/components/base/tabs/tab/Auto.vue";
-import TabMoto from "~/components/base/tabs/tab/Moto.vue";
-
 export default {
-  components: {
-    TabAuto,
-    TabMoto,
-  },
-
   data() {
     return {
       openTab: 1,

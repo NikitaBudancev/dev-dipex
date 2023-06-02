@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-5">
-    <BaseProductCard
+    <ProductCard
       v-for="product in products"
       :key="product.id"
       :product="product"
