@@ -6,8 +6,8 @@
       :class="{ 'border border-red-500': errors.length }"
       type="text"
       name="name"
-      :value="value"
-      @input="$emit('update', $event.target.value)"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
     <span
       v-for="error of errors"
@@ -20,19 +20,19 @@
 </template>
 
 <script setup lang="ts">
-defineEmits(["update"]);
+defineEmits(["update:modelValue"]);
 
 defineProps({
   label: {
     type: String,
     default: "",
   },
-  value: {
+  modelValue: {
     type: String,
     default: "",
   },
   errors: {
-    type: Array,
+    type: Array as PropType<Array<{ $message: string; $uid: string }>>,
     default() {
       return [];
     },

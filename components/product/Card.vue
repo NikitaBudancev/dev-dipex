@@ -4,7 +4,7 @@
       <div class="w-3/12">
         <NuxtLink
           class="relative"
-          :to="product.code + '/'"
+          :to="props.product.code + '/'"
           title="Тормозной суппорт ABAKUS 131-04-006"
           data-entity="image-wrapper"
         >
@@ -19,17 +19,14 @@
               />
             </div>
             <ProductBrandLogo
-              :id="product.id"
+              :id="props.product.id"
               tooltip-text="ABAKUS"
               img-path="https://dipex.lv/images/brands/10100001.jpg"
             />
           </div>
 
           <div>
-            <img
-              src="https://digital-assets.tecalliance.services/images/800/3abc36cdc5b1adad1c7a219b8fd2a424da4b1863.jpg"
-              alt=""
-            />
+            <img :src="props.product.image.src" alt="" />
           </div>
         </NuxtLink>
       </div>
@@ -42,7 +39,7 @@
                 <div class="product-item-title">
                   <NuxtLink
                     class="text-lg text-[#3f3f3f] font-bold"
-                    :to="product.code + '/'"
+                    :to="props.product.code + '/'"
                     title="Тормозной суппорт ABAKUS 131-04-006"
                     data-product-id="14342831"
                   >
@@ -59,7 +56,7 @@
                 data-fill="4"
               >
                 <ProductRating
-                  :id="product.id"
+                  :id="props.product.id"
                   :rating="4"
                   tooltip-text="Высокий класс"
                 />
@@ -216,10 +213,12 @@
 </template>
 
 <script setup lang="ts">
-const { product } = defineProps({
+import { Product } from "~/models/product.model";
+
+const props = defineProps({
   product: {
-    type: Object,
-    require: true,
+    type: Object as PropType<Product>,
+    required: true,
   },
 });
 

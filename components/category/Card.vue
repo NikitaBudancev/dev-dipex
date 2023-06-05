@@ -54,11 +54,13 @@
 </template>
 
 <script setup lang="ts">
+import { Category } from "~/models/category.model";
+
 const localePath = useLocalePath();
 
 const props = defineProps({
   item: {
-    type: Object,
+    type: Object as PropType<Category>,
     required: true,
   },
 });

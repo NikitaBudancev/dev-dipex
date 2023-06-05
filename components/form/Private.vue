@@ -34,6 +34,7 @@
       </div>
       <InputMain
         v-model="formData.password"
+        type="password"
         name="password"
         :label="t('passwordNew')"
         :errors="v$.password.$errors"
@@ -41,6 +42,7 @@
       <InputMain
         v-model="formData.passwordConfirm"
         name="passwordConfirm"
+        type="password"
         :label="t('passwordConfirm')"
         :errors="v$.passwordConfirm.$errors"
       />

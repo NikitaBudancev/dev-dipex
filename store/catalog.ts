@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
+import { Category } from "~/models/category.model";
 
 export const useCatalogStore = defineStore("catalogStore", () => {
-  const categories = ref([
+  const categories: Ref<Category[]> = ref([
     {
       id: 1,
       title: "Тормозная система",
