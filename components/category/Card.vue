@@ -4,7 +4,6 @@
       :src="item.image"
       class="absolute bottom-3 right-3 w-28 h-28 object-contain"
     />
-
     <NuxtLink
       :to="localePath('/catalog/rezerves-dalas/exhaust-system/')"
       class="font-semibold mb-4 block"
@@ -54,16 +53,14 @@
 </template>
 
 <script setup lang="ts">
-import { Category } from "~/models/category.model";
+import { Category } from "~/types/category";
 
 const localePath = useLocalePath();
 
-const props = defineProps({
+defineProps({
   item: {
     type: Object as PropType<Category>,
     required: true,
   },
 });
-
-const { item } = toRefs(props);
 </script>

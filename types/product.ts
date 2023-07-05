@@ -1,4 +1,4 @@
-import { Price } from "./price.model";
+import { Price } from "./price";
 
 export interface Product {
   name: string;
@@ -23,5 +23,5 @@ export interface Product {
     dir: string;
     filename: string;
     src: string;
-  }[];
+  };
 }

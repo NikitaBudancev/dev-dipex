@@ -29,18 +29,12 @@
           <span class="sr-only">Close modal</span>
         </button>
         <ClientOnly>
-          <FormLogin
-            v-if="formName === 'login'"
-            @change-form="changeForm"
-          />
+          <FormLogin v-if="formName === 'login'" @change-form="changeForm" />
           <FormRegister
             v-if="formName === 'register'"
             @change-form="changeForm"
           />
-          <FormForgot
-            v-if="formName === 'forgot'"
-            @change-form="changeForm"
-          />
+          <FormForgot v-if="formName === 'forgot'" @change-form="changeForm" />
         </ClientOnly>
       </div>
     </div>

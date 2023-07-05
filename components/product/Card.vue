@@ -213,7 +213,7 @@
 </template>
 
 <script setup lang="ts">
-import { Product } from "~/models/product.model";
+import { Product } from "~/types/product";
 
 const props = defineProps({
   product: {

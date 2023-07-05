@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { Category } from "~/models/category.model";
+import { Category } from "~/types/category";
 
 export const useCatalogStore = defineStore("catalogStore", () => {
   const categories: Ref<Category[]> = ref([

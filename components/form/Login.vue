@@ -91,13 +91,9 @@
 
 <script setup lang="ts">
 import { useVuelidate } from "@vuelidate/core";
-import {
-  required,
-  email,
-  sameAs,
-  minLength,
-  helpers,
-} from "@vuelidate/validators";
+import { required, email, minLength, helpers } from "@vuelidate/validators";
+
+defineEmits(["changeForm"]);
 
 const { t } = useLang();
 
